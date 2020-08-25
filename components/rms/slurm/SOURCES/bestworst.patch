@@ -1,0 +1,65 @@
+diff -ur ./slurm-19.05.5/src/plugins/select/linear/select_linear.c ./slurm-19.05.5-patched/src/plugins/select/linear/select_linear.c
+--- ./slurm-19.05.5/src/plugins/select/linear/select_linear.c	2019-12-20 13:44:51.000000000 -0700
++++ ./slurm-19.05.5-patched/src/plugins/select/linear/select_linear.c	2020-01-25 10:43:45.721669663 -0700
+@@ -1,4 +1,5 @@
+-/*****************************************************************************\
++/*  _job_test_topo phase 3 and 5 changed by Vitus Leung on May 23, 2019
++/***************************************************************************** \
+  *  select_linear.c - node selection plugin for simple one-dimensional
+  *  address space. Selects nodes for a job so as to minimize the number
+  *  of sets of consecutive nodes using a best-fit algorithm.
+@@ -2037,7 +2038,7 @@
+ 	}
+ 
+ 	/* phase 3 */
+-	/* Determine lowest level switch satisfying request with best fit */
++	/* Determine lowest level switch satisfying request with best or worst fit */
+ 	best_fit_inx = -1;
+ 	for (j = 0; j < switch_record_cnt; j++) {
+ #if SELECT_DEBUG
+@@ -2052,7 +2053,9 @@
+ 		     switch_record_table[best_fit_inx].level) ||
+ 		    ((switch_record_table[j].level ==
+ 		      switch_record_table[best_fit_inx].level) &&
+-		     (switches_node_cnt[j] < switches_node_cnt[best_fit_inx])))
++		     (switch_record_table[j].level && job_ptr->req_switch ? 
++		      switches_node_cnt[j] > switches_node_cnt[best_fit_inx] :
++		      switches_node_cnt[j] < switches_node_cnt[best_fit_inx])))
+ 			best_fit_inx = j;
+ 	}
+ 	if (best_fit_inx == -1) {
+@@ -2161,8 +2164,8 @@
+ 	}
+ 
+ 	/* phase 5 */
+-	/* Select resources from these leafs on a best-fit basis */
+-	/* Compute best-switch nodes available array */
++	/* Select resources from these leafs on a best/worst-fit basis */
++	/* Compute best/worst-switch nodes available array */
+ 	while ((alloc_nodes <= max_nodes) &&
+ 	       ((alloc_nodes < want_nodes) || (rem_cpus > 0))) {
+ 		best_fit_cpus = best_fit_nodes = 0;
+@@ -2170,13 +2173,18 @@
+ 			if (switches_node_cnt[j] == 0)
+ 				continue;
+ 			/* If multiple leaf switches must be used, prefer use
+-			 * of leaf switches with fewest number of idle CPUs.
+-			 * This results in more leaf switches being used and
+-			 * achieves better network bandwidth. */
++			 * of leaf switches with fewest or most number of idle CPUs
++			 * depending on whether switches option used.  
++			 * Fewest results in more leaf switches being used and
++			 * achieves better network bandwidth.
++			 * Most results in fewer leaf switches being used and
++			 * achieves better network bandwidth separation between
++			 * jobs per SC18 paper. */
+ 			if ((best_fit_nodes == 0) ||
+ 			    (!switches_required[best_fit_location] &&
+ 			     switches_required[j]) ||
+-			    (switches_cpu_cnt[j] < best_fit_cpus)) {
++			    (job_ptr->req_switch ? switches_cpu_cnt[j] > best_fit_cpus :
++			     switches_cpu_cnt[j] < best_fit_cpus)) {
+ 				best_fit_cpus =  switches_cpu_cnt[j];
+ 				best_fit_nodes = switches_node_cnt[j];
+ 				best_fit_location = j;
+Only in ./slurm-19.05.5-patched/src/plugins/select/linear: select_linear.c.orig

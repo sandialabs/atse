@@ -1,0 +1,86 @@
+ATSE 1.2.5
+==========
+* Update Arm compilers to 20.1 (was 20.0)
+* Add GNU GCC 9.3.0 compilers
+* Update OpenMPI4 to 4.0.3 (was 4.0.2)
+* Update Cmake to 3.17.1 (was 3.12.2)
+* Update Git to 2.26.2 (was 2.19.2)
+* Add Git-lfs 2.10.0 (large file support)
+* Update Spack to 0.14.2 + ATSE patches (was 0.13.4)
+* Update CharlieCloud to 0.15 (was 0.13)
+* Update Singularity to 3.5.3 (was 3.5.2)
+
+ATSE 1.2.4
+==========
+* Update Arm compilers to 20.0 (was 19.3)
+* Update ARM Forge and Reports to 20.0.2 (was 19.1)
+* Make openmpi4 the default MPI (was openmpi3)
+* Update Boost to 1.72.0 (was 1.68.0)
+* Update SLURM to 19.05.5 (was 18.08.8)
+* Update Singularity to 3.5.3 (was 3.4.2)
+* Update CharlieCloud to 0.13 (was 0.11)
+* Update Spack to 0.13.4 with SNL patches (was 0.13.0)
+* Update PowerAPI to 20200130 (was 20191210)
+* Add Cmake 3.9.2   (Needed to support a particular code)
+* Add Cmake 3.14.5  (Needed to support a particular code)
+* Add Darshan 3.1.8 (I/O profiling library)
+* Add LDMS 4.3.3    (System Monitoring)
+* Fix bug in superlu_dist, was not configured properly for parmetis
+
+ATSE 1.2.3
+==========
+* Add OpenMPI4 package version 4.0.2
+* Update Arm compilers to 19.3 (was 19.2)
+* Update MOFED to 4.7-3.2.9.0 (was 4.5-1.0.1.0)
+* Update SLURM to 18.08.8 (was 17.11.12)
+* Update OpenUCX to 1.7.0 as shipped by MOFED (was 1.5.2)
+* Update Singularity to 3.4.2 (was 3.2.1)
+* Update Charliecloud to 0.11 (was 0.9.10)
+* Update Binutils to 2.33.1 (was 2.31.1)
+* Update Spack to 0.13.0 (was 0.12.1)
+* Add PowerAPI package version 20191210
+* Update tx2mon to latest version 20191029 (was 20190620)
+* Update tx2pmu to latest version 20191029 (was 20190620)
+* Update Valgrind to upstream that includes support for Arm LSE atomics 20191203
+* Modify OpenUCX to depend on ATSE binutils rather than base OS binutils
+
+ATSE 1.2.2
+==========
+* Update HPE-MPI to 1.4 (was 1.3, + rebuild all dependent packages)
+* Update OpenUCX to 1.5.2 (was 1.5.1)
+* Update PMIx to 2.2.3 (was 2.1.4)
+* Test fully automated build scripts for OBS ATSE build farm
+* NOTE: Attempted to reconfigure OpenMPI with --disable-dlopen, but breaks TPL builds
+
+ATSE 1.2.1
+==========
+* Update Valgrind to 3.15.0 (was 3.14.0)
+* Updated Singularity to 3.2.1 (was 3.1.2)
+* Update CharlieCloud to 0.9.10 (was 0.9.6)
+* Update OpenMPI to 3.1.4 (was 3.1.3)
+* Update ARM compilers to 19.2 (was 19.0)
+* Update Forge and Reports to 19.1 (was 19.0.3)
+* Add HPE-MPI 1.3 (+ all mpi-dependent packages rebuilt for HPE-MPI)
+* Update HDF5 to 1.10.5 (was 1.10.3)
+* Update NetCDF to 4.6.3 (was 4.6.1)
+* Add NetCDF-Fortran 4.4.5
+* Add NetCDF-CXX 4.3.0
+* Update pNetCDF to 1.11.1 (was 1.10.0)
+* Add Parmetis 4.0.3 (for use by US Government and Non-Profits only, other use requires license)
+* Add CGNS 3.4.0 + patch needed to make work with MPI / Trilinos / SPARC
+* Add omb 5.6.1
+* Add mpiP 3.4.1
+* Add pdtoolkit 3.25
+* Add tau 2.28
+* Add tx2mon (Marvell utility for seeing System On Chip state, power, thermals)
+* Add tx2pmu (Marvell kernel driver to add uncore counters)
+
+ATSE 1.2.0
+==========
+* Linux Kernel: RHEL 7.6 errata kernel-4.14.0-115.2.2.el7a.aarch64
+* GNU GCC 7.2.0 (gnu7)
+* Arm Compiler for HPC 19.0 (arm)
+* Arm Performance Libraries 19.0 (armpl)
+* Arm Forge 19.0.3 (forge)
+* Arm Reports 19.0.3 (reports)
+

@@ -1,0 +1,5 @@
+[ATSE]
+name=atse
+baseurl=http://atse.sandia.gov/ATSE:/1.2.4-tx2/RHEL_7.6/
+gpgcheck=0
+proxy=_none_

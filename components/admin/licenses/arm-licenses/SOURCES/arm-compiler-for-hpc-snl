@@ -1,0 +1,6 @@
+type=2
+serial_number=XXXXX
+hostname=XXX.XXX.XXX.XXX
+serverport=XXXX
+features=ddt,map,perf-report,compiler
+hash2=XXXXXXXXXXXXXXXX

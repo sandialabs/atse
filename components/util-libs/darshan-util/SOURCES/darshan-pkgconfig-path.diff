@@ -1,0 +1,11 @@
+--- darshan-util/Makefile.in.orig	2020-02-17 23:48:09.580232700 -0700
++++ darshan-util/Makefile.in	2020-02-17 23:48:52.600873900 -0700
+@@ -10,7 +10,7 @@
+ sbindir = $(DESTDIR)@sbindir@
+ bindir = $(DESTDIR)@bindir@
+ libdir = $(DESTDIR)@libdir@
+-pkgconfigdir = $(DESTDIR)$(libdir)/pkgconfig
++pkgconfigdir = $(DESTDIR)@libdir@/pkgconfig
+ 
+ DARSHAN_LOG_FORMAT = $(srcdir)/../darshan-log-format.h
+ DARSHAN_MOD_LOG_FORMATS = $(srcdir)/../darshan-posix-log-format.h \

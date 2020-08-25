@@ -1,0 +1,16 @@
+diff --git a/util/sample_init_scripts/genders/systemd/etc/sysconfig/ldms.d/ldms-functions.in b/util/sample_init_scripts/genders/systemd/etc/sysconfig/ldms.d/ldms-functions.in
+index 04662a6..2337721 100644
+--- a/util/sample_init_scripts/genders/systemd/etc/sysconfig/ldms.d/ldms-functions.in
++++ b/util/sample_init_scripts/genders/systemd/etc/sysconfig/ldms.d/ldms-functions.in
+@@ -5,9 +5,9 @@ STRGPMATCHHOSTS=/bin/false
+ sysconfdir=@sysconfdir@
+ localstatedir=@localstatedir@
+ if test "x$LDMSCLUSTER" = "local"; then
+-	LTAG="ldmsd"
++	LTAG="${OVISCOLLNAME}ldmsd"
+ else
+-	LTAG="ldmsd@$LDMSCLUSTER"
++	LTAG="${OVISCOLLNAME}ldmsd@$LDMSCLUSTER"
+ fi
+ 
+ #

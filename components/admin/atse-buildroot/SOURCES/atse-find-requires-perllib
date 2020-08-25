@@ -1,0 +1,109 @@
+#!/bin/bash
+#
+# atse-find-requires
+#-----------------------------------------------------------------------
+# Licensed under the Apache License, Version 2.0 (the "License"); you
+# may not use this file except in compliance with the License. You may
+# obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+# implied. See the License for the specific language governing
+# permissions and limitations under the License.
+#-----------------------------------------------------------------------
+
+IFS=$'\n'
+
+# First argument is buildroot
+buildroot="$1"
+if [ ! -d "$buildroot" ]; then
+    >&2 echo "Invalid buildroot"
+    exit 1
+fi
+
+# Second argument is default search path.
+searchPath="$2"
+
+if [ -z "$searchPath" ];then
+    >&2echo "Required search path argument not provided"
+    exit 1
+fi
+
+if [ ! -x /usr/lib/rpm/perl.req ]; then
+    >&2 echo "Required /usr/lib/rpm/perl.req binary not available locally"
+    exit 1
+fi
+
+# Get the list of files.
+filelist=`sed "s/[]['\"*?{}]/\\\\\&/g"`
+
+if [ -z "$filelist" ]; then exit 0; fi
+
+
+# Step 1: use standard elfdeps analysis and cache results
+requireList=$(echo ${filelist} | /usr/lib/rpm/perl.req)
+
+# Step 2: append additional color delimiter for atse provided packages (that
+# install into $searchPath)
+
+for require in ${requireList}; do
+
+    atserequire=$(echo $require | sed "s/)/)(atse)/")
+    shortrequire=$(echo $require | sed "s/\([^[:space:]]*\).*/\1/")
+
+    # Check if this is owned by atse pre-requisite
+    package=$(rpm -q --queryformat '%{NAME}\n' --whatprovides "$atserequire")
+    if [ $? -eq 0 ];then
+        echo "$atserequire"
+    else
+
+        # check if this requirement is housed in ${buildroot}/opt/atse.
+        # If so, we append an (atse) color designation, otherwise we
+        # leave the requirement as is.
+        #
+        # First sed matches everything up until first non-space character and returns it.
+        #     "perl(Git::SVN::Utils) = 1.0" -> "perl(Git::SVN::Utils)"
+        #
+        # Second sed extracts the perl capability
+        #     "perl(Git::SVN::Utils)" -> "Git::SVN::Utils"
+        #
+        # Third sed changes all '::' to '/' to form a valid pathname
+        #     "Git::SVN::Utils" -> "Git/SVN/Utils"
+        #
+        # Fourth sed tacks on a ".pm" to the end of the string, to form a valid perl module name
+        #     "Git/SVN/Utils" -> "Git/SVN/Utils.pm"
+        filepattern=$(echo $require | sed "s/\([^[:space:]]*\).*/\1/" | sed "s/perl.*(\(.*\)).*/\1/" | sed "s/::/\//g" | sed "s/\(.*\)/\1.pm/")
+
+        # See if the perl module is provided in an ATSE package.
+        # If so, require the atse version.
+        # Otherwise, require the base OS version.
+
+        # Get a list of all files in the package matching filepattern
+        filelist=$(find ${buildroot}/${searchPath} -print0 | grep -FzZ ${filepattern})
+
+        # Parse all files matching filepattern to find the modules they provide
+        providelist=$(echo $filelist | tr '[:blank:]' \\n | grep '\.pm$' | /usr/lib/rpm/perl.prov | sort -u)
+
+        # Look for a match
+        found=false
+        for provide in $providelist; do
+            # echo "Testing if ${shortrequire} equals ${shortprovide}"
+            shortprovide=$(echo $provide | sed "s/\([^[:space:]]*\).*/\1/")
+            if [ "${shortrequire}" == "${shortprovide}" ];then
+                echo "$atserequire"
+                found=true
+                break
+            fi
+        done
+
+        # Catch all, depend on the base OS version
+        if [ "$found" = false ];then
+            echo "$require"
+        fi
+
+    fi
+
+ done

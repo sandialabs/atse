@@ -1,0 +1,370 @@
+# OpenHPC build script/utilities
+#
+#-----------------------------------------------------------------------
+# Licensed under the Apache License, Version 2.0 (the "License"); you
+# may not use this file except in compliance with the License. You may
+# obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+# implied. See the License for the specific language governing
+# permissions and limitations under the License.
+#-----------------------------------------------------------------------
+
+# OHPC_macros less the DocDir redefinition
+
+# Top-level OpenHPC installation paths
+%global OHPC_BUILD 1
+%global PROJ_NAME       atse
+%global OHPC_HOME       /opt/%{PROJ_NAME}
+%global OHPC_ADMIN      %{OHPC_HOME}
+%global OHPC_PUB        %{OHPC_HOME}
+%global OHPC_APPS       %{OHPC_PUB}/apps
+%global OHPC_DOCS       %{OHPC_PUB}/doc
+%global OHPC_COMPILERS  %{OHPC_PUB}/compiler
+%global OHPC_LIBS       %{OHPC_PUB}/libs
+%global OHPC_MODULES    %{OHPC_PUB}/modulefiles
+%global OHPC_MODULEDEPS %{OHPC_PUB}/moduledeps
+%global OHPC_MPI_STACKS %{OHPC_PUB}/mpi
+%global OHPC_UTILS      %{OHPC_PUB}/utils
+%global OHPC_TOOLS      %{OHPC_PUB}/tools
+%global OHPC_DARSHAN_LOGS  %{OHPC_PUB}/darshan-logs
+%global debug_package   %{nil}
+%global dist            .atse
+
+%{!?PROJ_DELIM: %global PROJ_DELIM -atse}
+
+
+
+# This actually does not work with %%global
+%define PNAME %(eval tr [a-z] [A-Z] <<< %{pname})
+
+# Instead of having Source[1-9]: OHPC_macros in every SPEC file,
+# this sets Source42 for all SPEC files which include OHPC_macros.
+Source42: OHPC_macros_ldms
+
+%if 0%{?rhel} == 7
+    # OBS define's rhel_version to 700 for RHEL, in case we are
+    # not running in OBS
+    %global rhel_version 700
+%endif
+
+# OpenHPC packages require ohpc-filesystem which defines the basic
+# installation path layout
+%if 0%{?ohpc_bootstrap} == 0
+Requires: %{PROJ_NAME}-filesystem
+%endif
+
+# OpenHPC packages also require ohpc-buildroot to access macros used to define
+# compiler and MPI families
+%if 0%{?ohpc_bootstrap} == 0
+BuildRequires: %{PROJ_NAME}-buildroot
+%endif
+
+# OpenHPC convention: the default build configuration for compiler/MPI
+# dependent packages assumes the gnu compiler and openmpi family; however,
+# these choices can be overridden by specifing the compiler_family/mpi_family
+# variables via rpmbuild or other mechanisms.
+
+%{!?compiler_family: %global compiler_family gnu7}
+%{!?mpi_family: %global mpi_family openmpi3}
+%{!?python_family: %global python_family python3}
+
+# Default optimization flags are empty
+%define ohpc_optflags -fPIC -O3 -g -fno-omit-frame-pointer
+%define ohpc_optflags_uarch %{nil}
+
+# Autotools dependencies
+%if 0%{?ohpc_autotools_dependent} == 1
+BuildRequires:  autoconf%{PROJ_DELIM}
+BuildRequires:  automake%{PROJ_DELIM}
+BuildRequires:  libtool%{PROJ_DELIM}
+BuildRequires:  m4
+%endif
+
+# Micro-architecture dependencies
+%if 0%{?ohpc_uarch_dependent} == 1
+
+# Default case, use lowest-common-denominator 'generic' target
+%{!?uarch: %define uarch generic}
+
+# Default case, no uarch specified
+%global UARCH_DELIM %{nil}
+
+# Arm targets
+%ifarch aarch64
+%if "%{uarch}" == "tx2"
+%global UARCH_DELIM -tx2
+%global ohpc_optflags_uarch -mtune=thunderx2t99 -mcpu=thunderx2t99
+%endif
+%endif
+
+# Add appropriate 'Provides:' and 'Conflicts:' to allow
+# only one uarch variant to be installed at a time.
+%if "%{UARCH_DELIM}" != "%{nil}"
+%if 0%{?ohpc_compiler_dependent} == 1
+%if 0%{?ohpc_mpi_dependent} == 1
+Provides:  %{pname}-%{compiler_family}-%{mpi_family}%{PROJ_DELIM}
+Conflicts: %{pname}-%{compiler_family}-%{mpi_family}%{PROJ_DELIM}
+%else
+Provides:  %{pname}-%{compiler_family}%{PROJ_DELIM}
+Conflicts: %{pname}-%{compiler_family}%{PROJ_DELIM}
+%endif
+%endif
+%endif
+
+%endif
+
+# Compiler dependencies
+%if 0%{?ohpc_compiler_dependent} == 1
+
+BuildRequires: binutils%{PROJ_DELIM}
+Requires:      binutils%{PROJ_DELIM}
+
+%if "%{compiler_family}" == "gnu8"
+BuildRequires: gnu8-compilers%{PROJ_DELIM} >= 8.1.0
+Requires:      gnu8-compilers%{PROJ_DELIM} >= 8.1.0
+%endif
+%if "%{compiler_family}" == "gnu7"
+BuildRequires: gnu7-compilers%{PROJ_DELIM} >= 7.2.0
+Requires:      gnu7-compilers%{PROJ_DELIM} >= 7.2.0
+%endif
+%if "%{compiler_family}" == "intel"
+BuildRequires: gcc-c++ intel-compilers-devel%{PROJ_DELIM}
+Requires:      gcc-c++ intel-compilers-devel%{PROJ_DELIM}
+%if 0%{OHPC_BUILD}
+BuildRequires: intel_licenses
+%endif
+%endif
+%if "%{compiler_family}" == "arm"
+# Compiler license
+BuildRequires: arm-licenses
+# Compatibility modules
+BuildRequires: arm-compilers-devel%{PROJ_DELIM}
+Requires:      arm-compilers-devel%{PROJ_DELIM}
+%global __requires_exclude ^(libflang.*\\.so.*|libompstub\\.so.*|libomp\\.so.*|libarmpl.*\\.so.*|libstdc++\\.so.*)$
+%endif
+%if "%{compiler_family}" == "llvm"
+BuildRequires: llvm-compilers%{PROJ_DELIM}
+Requires:      llvm-compilers%{PROJ_DELIM}
+%endif
+
+%endif
+
+# Disable RPM symlink analysis on files in %%{OHPC_HOME}.
+%global __libsymlink_exclude_path  %{OHPC_HOME}/.*$
+
+# MPI dependencies
+%if 0%{?ohpc_mpi_dependent} == 1
+%if "%{mpi_family}" == "impi"
+BuildRequires: intel-mpi-devel%{PROJ_DELIM}
+Requires:      intel-mpi-devel%{PROJ_DELIM}
+%global __requires_exclude ^libmpi\\.so.*$|^libmpifort\\.so.*$|^libmpicxx\\.so.*$
+%endif
+%if "%{mpi_family}" == "mpich"
+BuildRequires: mpich-%{compiler_family}%{PROJ_DELIM}
+Requires:      mpich-%{compiler_family}%{PROJ_DELIM}
+%endif
+%if "%{mpi_family}" == "mvapich2"
+BuildRequires: mvapich2-%{compiler_family}%{PROJ_DELIM}
+Requires:      mvapich2-%{compiler_family}%{PROJ_DELIM}
+%endif
+%if "%{mpi_family}" == "openmpi3"
+BuildRequires: openmpi3-%{compiler_family}%{UARCH_DELIM}%{PROJ_DELIM}
+Requires:      openmpi3-%{compiler_family}%{UARCH_DELIM}%{PROJ_DELIM}
+%endif
+%if "%{mpi_family}" == "openmpi4"
+BuildRequires: openmpi4-%{compiler_family}%{UARCH_DELIM}%{PROJ_DELIM}
+Requires:      openmpi4-%{compiler_family}%{UARCH_DELIM}%{PROJ_DELIM}
+%endif
+%if "%{mpi_family}" == "hpempi"
+# Compatibility modules
+BuildRequires: hpempi-%{compiler_family}%{UARCH_DELIM}%{PROJ_DELIM}
+Requires:      hpempi-%{compiler_family}%{UARCH_DELIM}%{PROJ_DELIM}
+%endif
+%endif
+
+# Python dependencies and macros
+%if 0%{?ohpc_python_dependent} == 1
+%if "%{python_family}" == "python3"
+%global __python %__python3
+%global python_module_prefix py3-
+%global python_lib_dir python3.4
+%if "%{rhel_version}" == "700"
+%global python_prefix python34
+%endif
+%if 0%{?suse_version}
+%global python_prefix python3
+%endif
+%endif
+%if "%{python_family}" == "python2"
+%global python_module_prefix py2-
+%global python_lib_dir python2.7
+%global python_prefix python
+%endif
+BuildRequires: %{python_prefix}-devel
+BuildRequires: %{python_prefix}-setuptools
+BuildRequires: python-rpm-macros
+Requires:      %{python_prefix}
+%endif
+
+%global ohpc_setup_autotools %{expand:\
+    module load autotools \
+}
+
+%global ohpc_setup_compiler %{expand:\
+    . %{OHPC_ADMIN}/atse/ATSE_setup_compiler %{compiler_family} \
+    %if 0%{?ohpc_mpi_dependent} == 1 \
+        . %{OHPC_ADMIN}/atse/ATSE_setup_mpi %{mpi_family} \
+    %endif \
+}
+
+%global ohpc_setup_optflags %{expand:\
+    export CFLAGS="%ohpc_optflags %ohpc_optflags_uarch"
+    export CXXFLAGS="%ohpc_optflags %ohpc_optflags_uarch"
+    export FFLAGS="%ohpc_optflags %ohpc_optflags_uarch"
+    export FCFLAGS="%ohpc_optflags %ohpc_optflags_uarch"
+    # export LDFLAGS="-fuse-ld=gold"
+}
+
+# Install MOFED 4.6
+# Based on requires package list in mlnx-ofed-all-user-only with kmod's removed, other unneeded packages removed, and knem added.
+# rpm -qp --requires mlnx-ofed-all-user-only-4.6-1.0.1.1.rhel7.6alternate.noarch.rpm
+%if 0%{?ohpc_mofed_dependent} == 1
+BuildRequires: ar_mgr >= 1.0-0.42.g750eb1e.46101
+BuildRequires: cc_mgr >= 1.0-0.41.g750eb1e.46101
+BuildRequires: dump_pr >= 1.0-0.37.g750eb1e.46101
+BuildRequires: hcoll >= 4.3.2708-1.46101
+BuildRequires: ibacm >= 41mlnx1-OFED.4.3.3.0.0.46101
+BuildRequires: ibdump >= 5.0.0-3.46101
+#BuildRequires: ibsim >= 0.7mlnx1-0.11.g85c342b.46101
+BuildRequires: ibutils >= 1.5.7.1-0.12.gdcaeae2.46101
+BuildRequires: ibutils2 >= 2.1.1-0.104.MLNX20190408.gb55795e.46101
+BuildRequires: infiniband-diags >= 5.4.0.MLNX20190422.d1468cd-0.1.46101
+BuildRequires: infiniband-diags-compat >= 5.4.0.MLNX20190422.d1468cd-0.1.46101
+#BuildRequires: kmod-iser >= 4.6-OFED.4.6.1.0.1.1.ga2cfe08.rhel7u6alternate
+#BuildRequires: kmod-isert >= 4.6-OFED.4.6.1.0.1.1.ga2cfe08.rhel7u6alternate
+#BuildRequires: kmod-mlnx-ofa_kernel >= 4.6-OFED.4.6.1.0.1.1.ga2cfe08.rhel7u6alternate
+#BuildRequires: kmod-srp >= 4.6-OFED.4.6.1.0.1.1.ga2cfe08.rhel7u6alternate
+BuildRequires: libibcm >= 41mlnx1-OFED.4.1.0.1.0.46101
+BuildRequires: libibcm-devel >= 41mlnx1-OFED.4.1.0.1.0.46101
+BuildRequires: libibmad >= 5.4.0.MLNX20190423.1d917ae-0.1.46101
+BuildRequires: libibmad-devel >= 5.4.0.MLNX20190423.1d917ae-0.1.46101
+BuildRequires: libibmad-static >= 5.4.0.MLNX20190423.1d917ae-0.1.46101
+BuildRequires: libibumad >= 43.1.1.MLNX20190422.87b4d9b-0.1.46101
+BuildRequires: libibumad-devel >= 43.1.1.MLNX20190422.87b4d9b-0.1.46101
+BuildRequires: libibumad-static >= 43.1.1.MLNX20190422.87b4d9b-0.1.46101
+BuildRequires: libibverbs >= 41mlnx1-OFED.4.6.0.4.1.46101
+BuildRequires: libibverbs-devel >= 41mlnx1-OFED.4.6.0.4.1.46101
+BuildRequires: libibverbs-devel-static >= 41mlnx1-OFED.4.6.0.4.1.46101
+BuildRequires: libibverbs-utils >= 41mlnx1-OFED.4.6.0.4.1.46101
+BuildRequires: libmlx4 >= 41mlnx1-OFED.4.5.0.0.3.46101
+BuildRequires: libmlx4-devel >= 41mlnx1-OFED.4.5.0.0.3.46101
+BuildRequires: libmlx5 >= 41mlnx1-OFED.4.6.0.0.4.46101
+BuildRequires: libmlx5-devel >= 41mlnx1-OFED.4.6.0.0.4.46101
+##BuildRequires: libpka >= 1.0-1.g6cc68a2.46101
+BuildRequires: librdmacm >= 41mlnx1-OFED.4.6.0.0.1.46101
+BuildRequires: librdmacm-devel >= 41mlnx1-OFED.4.6.0.0.1.46101
+BuildRequires: librdmacm-utils >= 41mlnx1-OFED.4.6.0.0.1.46101
+BuildRequires: librxe >= 41mlnx1-OFED.4.4.2.4.6.46101
+BuildRequires: librxe-devel-static >= 41mlnx1-OFED.4.4.2.4.6.46101
+BuildRequires: mft >= 4.12.0-105
+BuildRequires: mlnx-ethtool >= 4.19-1.46101
+BuildRequires: mlnx-iproute2 >= 4.20.0-1.46101
+##BuildRequires: mlnx-ofa_kernel >= 4.6-OFED.4.6.1.0.1.1.ga2cfe08.rhel7u6alternate
+#BuildRequires: mpi-selector >= 1.0.3-1.46101
+#BuildRequires: mpitests_openmpi >= 3.2.20-e1a0676.46101
+BuildRequires: mstflint >= 4.11.0-1.14.g840c9c2.46101
+BuildRequires: ofed-scripts >= 4.6-OFED.4.6.1.0.1
+#BuildRequires: openmpi >= 4.0.2a1-1.46101
+BuildRequires: opensm >= 5.4.0.MLNX20190422.ed81811-0.1.46101
+BuildRequires: opensm-devel >= 5.4.0.MLNX20190422.ed81811-0.1.46101
+BuildRequires: opensm-libs >= 5.4.0.MLNX20190422.ed81811-0.1.46101
+BuildRequires: opensm-static >= 5.4.0.MLNX20190422.ed81811-0.1.46101
+BuildRequires: perftest >= 4.4-0.5.g1ceab48.46101
+BuildRequires: qperf >= 0.4.9-9.46101
+#BuildRequires: rpmlib(CompressedFileNames) <= 3.0.4-1
+#BuildRequires: rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+BuildRequires: sharp >= 1.8.1.MLNX20190422.6c05a05-1.46101
+#BuildRequires: srptools >= 41mlnx1-5.46101
+#BuildRequires: ucx-cma >= 1.6.0-1.46101
+#BuildRequires: ucx-devel >= 1.6.0-1.46101
+#BuildRequires: ucx-ib >= 1.6.0-1.46101
+#BuildRequires: ucx-ib-cm >= 1.6.0-1.46101
+#BuildRequires: ucx-rdmacm >= 1.6.0-1.46101
+BuildRequires: knem
+BuildRequires: systemd-devel
+Requires: ar_mgr >= 1.0-0.42.g750eb1e.46101
+Requires: cc_mgr >= 1.0-0.41.g750eb1e.46101
+Requires: dump_pr >= 1.0-0.37.g750eb1e.46101
+Requires: hcoll >= 4.3.2708-1.46101
+Requires: ibacm >= 41mlnx1-OFED.4.3.3.0.0.46101
+Requires: ibdump >= 5.0.0-3.46101
+#Requires: ibsim >= 0.7mlnx1-0.11.g85c342b.46101
+Requires: ibutils >= 1.5.7.1-0.12.gdcaeae2.46101
+Requires: ibutils2 >= 2.1.1-0.104.MLNX20190408.gb55795e.46101
+Requires: infiniband-diags >= 5.4.0.MLNX20190422.d1468cd-0.1.46101
+Requires: infiniband-diags-compat >= 5.4.0.MLNX20190422.d1468cd-0.1.46101
+#Requires: kmod-iser >= 4.6-OFED.4.6.1.0.1.1.ga2cfe08.rhel7u6alternate
+#Requires: kmod-isert >= 4.6-OFED.4.6.1.0.1.1.ga2cfe08.rhel7u6alternate
+#Requires: kmod-mlnx-ofa_kernel >= 4.6-OFED.4.6.1.0.1.1.ga2cfe08.rhel7u6alternate
+#Requires: kmod-srp >= 4.6-OFED.4.6.1.0.1.1.ga2cfe08.rhel7u6alternate
+Requires: libibcm >= 41mlnx1-OFED.4.1.0.1.0.46101
+Requires: libibcm-devel >= 41mlnx1-OFED.4.1.0.1.0.46101
+Requires: libibmad >= 5.4.0.MLNX20190423.1d917ae-0.1.46101
+Requires: libibmad-devel >= 5.4.0.MLNX20190423.1d917ae-0.1.46101
+Requires: libibmad-static >= 5.4.0.MLNX20190423.1d917ae-0.1.46101
+Requires: libibumad >= 43.1.1.MLNX20190422.87b4d9b-0.1.46101
+Requires: libibumad-devel >= 43.1.1.MLNX20190422.87b4d9b-0.1.46101
+Requires: libibumad-static >= 43.1.1.MLNX20190422.87b4d9b-0.1.46101
+Requires: libibverbs >= 41mlnx1-OFED.4.6.0.4.1.46101
+Requires: libibverbs-devel >= 41mlnx1-OFED.4.6.0.4.1.46101
+Requires: libibverbs-devel-static >= 41mlnx1-OFED.4.6.0.4.1.46101
+Requires: libibverbs-utils >= 41mlnx1-OFED.4.6.0.4.1.46101
+Requires: libmlx4 >= 41mlnx1-OFED.4.5.0.0.3.46101
+Requires: libmlx4-devel >= 41mlnx1-OFED.4.5.0.0.3.46101
+Requires: libmlx5 >= 41mlnx1-OFED.4.6.0.0.4.46101
+Requires: libmlx5-devel >= 41mlnx1-OFED.4.6.0.0.4.46101
+##Requires: libpka >= 1.0-1.g6cc68a2.46101
+Requires: librdmacm >= 41mlnx1-OFED.4.6.0.0.1.46101
+Requires: librdmacm-devel >= 41mlnx1-OFED.4.6.0.0.1.46101
+Requires: librdmacm-utils >= 41mlnx1-OFED.4.6.0.0.1.46101
+Requires: librxe >= 41mlnx1-OFED.4.4.2.4.6.46101
+Requires: librxe-devel-static >= 41mlnx1-OFED.4.4.2.4.6.46101
+Requires: mft >= 4.12.0-105
+Requires: mlnx-ethtool >= 4.19-1.46101
+Requires: mlnx-iproute2 >= 4.20.0-1.46101
+##Requires: mlnx-ofa_kernel >= 4.6-OFED.4.6.1.0.1.1.ga2cfe08.rhel7u6alternate
+#Requires: mpi-selector >= 1.0.3-1.46101
+#Requires: mpitests_openmpi >= 3.2.20-e1a0676.46101
+Requires: mstflint >= 4.11.0-1.14.g840c9c2.46101
+Requires: ofed-scripts >= 4.6-OFED.4.6.1.0.1
+#Requires: openmpi >= 4.0.2a1-1.46101
+Requires: opensm >= 5.4.0.MLNX20190422.ed81811-0.1.46101
+Requires: opensm-devel >= 5.4.0.MLNX20190422.ed81811-0.1.46101
+Requires: opensm-libs >= 5.4.0.MLNX20190422.ed81811-0.1.46101
+Requires: opensm-static >= 5.4.0.MLNX20190422.ed81811-0.1.46101
+Requires: perftest >= 4.4-0.5.g1ceab48.46101
+Requires: qperf >= 0.4.9-9.46101
+#Requires: rpmlib(CompressedFileNames) <= 3.0.4-1
+#Requires: rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Requires: sharp >= 1.8.1.MLNX20190422.6c05a05-1.46101
+#Requires: srptools >= 41mlnx1-5.46101
+#Requires: ucx-cma >= 1.6.0-1.46101
+#Requires: ucx-devel >= 1.6.0-1.46101
+#Requires: ucx-ib >= 1.6.0-1.46101
+#Requires: ucx-ib-cm >= 1.6.0-1.46101
+#Requires: ucx-rdmacm >= 1.6.0-1.46101
+Requires: knem
+Requires: systemd-devel
+%endif
+
+# Hack for Arm compilers to skip rpmbuild's post-build strip.
+# For unknown reasons, the version of strip that
+# ships with RedHat doesn't like to strip static binaries generated by the
+# Arm compilers.
+# We likely want debug symbols anyway. TODO: yes/no on debug symbols?
+# %global __os_install_post /usr/lib/rpm/brp-compress

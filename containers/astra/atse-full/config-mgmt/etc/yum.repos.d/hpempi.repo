@@ -1,0 +1,4 @@
+[HPEMPI]
+name=hpempi
+baseurl=file:///tmp/HPE-MPI-1.4-RPMS
+gpgcheck=0

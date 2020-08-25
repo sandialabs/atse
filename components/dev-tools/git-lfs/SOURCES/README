@@ -1,0 +1,67 @@
+Building git-lfs requires downloading ~ 350 MB of go modules from various
+random places on the Internet, list below.  Since this is problematic on
+RPM build servers that do not have access to the Internet, such as the ATSE OBS
+build server and LLNL Koji TOSS build server, the workaround is to check in
+the git-lfs binary directly.
+
+For example, the git-lsf-2.10.0-aarch64 binary that is checked in was built
+by hand on stria.sandia.gov by unpacking the git-lsf-2.10.0.tar.gz tarball
+and running "make".  Then the resulting bin/git-lsf binary was copied to
+SOURCES/git-lsf-2.10.0-aarch64.
+
+This will need to be done by hand each for each supported architecture each
+time git-lsf is updated to a new version.
+
+
+# List of go modules downloaded as part of git-lsf build:
+-bash-4.2$ go generate github.com/git-lfs/git-lfs/commands
+go: downloading github.com/git-lfs/gitobj v1.4.1
+go: downloading github.com/spf13/cobra v0.0.3
+go: downloading golang.org/x/sync v0.0.0-20181221193216-37e7f081c4d4
+go: downloading github.com/olekukonko/ts v0.0.0-20171002115256-78ecb04241c0
+go: downloading github.com/mattn/go-isatty v0.0.4
+go: downloading github.com/pkg/errors v0.0.0-20170505043639-c605e284fe17
+go: downloading github.com/git-lfs/go-netrc v0.0.0-20180525200031-e0e9ca483a18
+go: downloading github.com/stretchr/testify v1.2.2
+go: downloading golang.org/x/net v0.0.0-20191027093000-83d349e8ac1a
+go: downloading github.com/rubyist/tracerx v0.0.0-20170927163412-787959303086
+go: extracting golang.org/x/sync v0.0.0-20181221193216-37e7f081c4d4
+go: extracting github.com/pkg/errors v0.0.0-20170505043639-c605e284fe17
+go: extracting github.com/rubyist/tracerx v0.0.0-20170927163412-787959303086
+go: extracting github.com/git-lfs/gitobj v1.4.1
+go: downloading github.com/git-lfs/go-ntlm v0.0.0-20190401175752-c5056e7fa066
+go: extracting github.com/olekukonko/ts v0.0.0-20171002115256-78ecb04241c0
+go: extracting github.com/git-lfs/go-netrc v0.0.0-20180525200031-e0e9ca483a18
+go: downloading github.com/ssgelm/cookiejarparser v1.0.1
+go: downloading github.com/git-lfs/wildmatch v1.0.4
+go: extracting github.com/ssgelm/cookiejarparser v1.0.1
+go: extracting github.com/mattn/go-isatty v0.0.4
+go: extracting github.com/git-lfs/wildmatch v1.0.4
+go: downloading github.com/dpotapov/go-spnego v0.0.0-20190506202455-c2c609116ad0
+go: extracting github.com/git-lfs/go-ntlm v0.0.0-20190401175752-c5056e7fa066
+go: extracting github.com/dpotapov/go-spnego v0.0.0-20190506202455-c2c609116ad0
+go: downloading gopkg.in/jcmturner/gokrb5.v5 v5.3.0
+go: extracting github.com/spf13/cobra v0.0.3
+go: extracting github.com/stretchr/testify v1.2.2
+go: downloading github.com/davecgh/go-spew v1.1.1
+go: downloading github.com/pmezard/go-difflib v1.0.0
+go: downloading github.com/spf13/pflag v1.0.3
+go: extracting github.com/pmezard/go-difflib v1.0.0
+go: extracting github.com/davecgh/go-spew v1.1.1
+go: extracting github.com/spf13/pflag v1.0.3
+go: extracting golang.org/x/net v0.0.0-20191027093000-83d349e8ac1a
+go: downloading golang.org/x/text v0.3.0
+go: extracting golang.org/x/text v0.3.0
+go: extracting gopkg.in/jcmturner/gokrb5.v5 v5.3.0
+go: downloading gopkg.in/jcmturner/dnsutils.v1 v1.0.1
+go: downloading github.com/jcmturner/gofork v1.0.0
+go: downloading github.com/hashicorp/go-uuid v1.0.1
+go: downloading golang.org/x/crypto v0.0.0-20190426145343-a29dc8fdc734
+go: downloading gopkg.in/jcmturner/aescts.v1 v1.0.1
+go: downloading gopkg.in/jcmturner/rpc.v0 v0.0.2
+go: extracting gopkg.in/jcmturner/dnsutils.v1 v1.0.1
+go: extracting github.com/hashicorp/go-uuid v1.0.1
+go: extracting gopkg.in/jcmturner/rpc.v0 v0.0.2
+go: extracting gopkg.in/jcmturner/aescts.v1 v1.0.1
+go: extracting github.com/jcmturner/gofork v1.0.0
+go: extracting golang.org/x/crypto v0.0.0-20190426145343-a29dc8fdc734

@@ -1,0 +1,26 @@
+diff --git a/util/sample_init_scripts/genders/systemd/services/ldmsd.service.in b/util/sample_init_scripts/genders/systemd/services/ldmsd.service.in
+index 70cae89..5a67f2d 100644
+--- a/util/sample_init_scripts/genders/systemd/services/ldmsd.service.in
++++ b/util/sample_init_scripts/genders/systemd/services/ldmsd.service.in
+@@ -34,7 +34,7 @@ Type=forking
+ PIDFile=@localstatedir@/run/ldmsd/ldmsd-local.pid
+ StandardOutput=journal
+ StandardError=journal
+-SyslogIdentifier=ldmsd
++SyslogIdentifier=sandia-nosos-ovis_@VERSION@-ldmsd
+ 
+ # Disable service start and stop timeout logic of systemd for ldmsd service.
+ TimeoutSec=0
+diff --git a/util/sample_init_scripts/genders/systemd/services/ldmsd@.service.in b/util/sample_init_scripts/genders/systemd/services/ldmsd@.service.in
+index 79db70e..cd8bff9 100644
+--- a/util/sample_init_scripts/genders/systemd/services/ldmsd@.service.in
++++ b/util/sample_init_scripts/genders/systemd/services/ldmsd@.service.in
+@@ -34,7 +34,7 @@ Type=forking
+ PIDFile=@localstatedir@/run/ldmsd/ldmsd-%I.pid
+ StandardOutput=journal
+ StandardError=journal
+-SyslogIdentifier=ldmsd@%i
++SyslogIdentifier=sandia-nosos-ovis_@VERSION@-ldmsd@%i
+ 
+ # Disable service start and stop timeout logic of systemd for ldmsd service.
+ TimeoutSec=0

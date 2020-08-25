@@ -1,0 +1,70 @@
+# OpenHPC build script/utilities
+#
+#-----------------------------------------------------------------------
+# Licensed under the Apache License, Version 2.0 (the "License"); you
+# may not use this file except in compliance with the License. You may
+# obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+# implied. See the License for the specific language governing
+# permissions and limitations under the License.
+#-----------------------------------------------------------------------
+# Sets up build environment for supported compiler families
+#-----------------------------------------------------------------------
+
+if [ "$#" = "1" ]; then
+    OHPC_COMPILER_FAMILY=$1
+fi
+
+if [ -z "$OHPC_COMPILER_FAMILY" ]; then
+    echo "Unknown OHPC_COMPILER_FAMILY"
+    exit 1
+fi
+
+# Always start from a clean module environment and load binutils
+module purge
+module load binutils
+
+if [ "$OHPC_COMPILER_FAMILY" = "gnu7" ]; then
+    export toolset=gcc
+#    export CC=gcc
+#    export CXX=g++
+#    export FC=gfortran
+#    export F77=gfortran
+    module load gnu7
+elif [ "$OHPC_COMPILER_FAMILY" = "gnu8" ]; then
+    export toolset=gcc
+#    export CC=gcc
+#    export CXX=g++
+#    export FC=gfortran
+#    export F77=gfortran
+    module load gnu8
+elif [ "$OHPC_COMPILER_FAMILY" = "intel" ]; then
+    export toolset=intel-linux
+#    export CC=icc
+#    export CXX=icpc
+#    export FC=ifort
+#    export F77=ifort
+    module load intel
+elif [ "$OHPC_COMPILER_FAMILY" = "arm" ]; then
+    export toolset=arm-linux
+#    export CC=armclang
+#    export CXX=armclang++
+#    export FC=armflang
+#    export F77=armflang
+    module load arm
+elif [ "$OHPC_COMPILER_FAMILY" = "llvm" ]; then
+    export toolset=clang
+#    export CC=clang
+#    export CXX=clang++
+#    export FC=flang
+#    export F77=flang
+    module load llvm
+else
+    echo "Unsupported OHPC_COMPILER_FAMILY -> $OHPC_COMPILER_FAMILY"
+    exit 1
+fi

@@ -1,0 +1,12 @@
+diff -ur ./cmake-3.9.2-pristine/Source/Modules/FindLibUV.cmake ./cmake-3.9.2-patched/Source/Modules/FindLibUV.cmake
+--- ./cmake-3.9.2-pristine/Source/Modules/FindLibUV.cmake	2017-09-07 10:10:58.000000000 -0600
++++ ./cmake-3.9.2-patched/Source/Modules/FindLibUV.cmake	2020-02-04 17:29:06.182038925 -0700
+@@ -63,6 +63,8 @@
+ set(_LibUV_H_REGEX "#[ \t]*define[ \t]+UV_VERSION_(MAJOR|MINOR|PATCH)[ \t]+[0-9]+")
+ if(LibUV_INCLUDE_DIR AND EXISTS "${LibUV_INCLUDE_DIR}/uv-version.h")
+   file(STRINGS "${LibUV_INCLUDE_DIR}/uv-version.h" _LibUV_H REGEX "${_LibUV_H_REGEX}")
++elseif(LibUV_INCLUDE_DIR AND EXISTS "${LibUV_INCLUDE_DIR}/uv/version.h")
++  file(STRINGS "${LibUV_INCLUDE_DIR}/uv/version.h" _LibUV_H REGEX "${_LibUV_H_REGEX}")
+ elseif(LibUV_INCLUDE_DIR AND EXISTS "${LibUV_INCLUDE_DIR}/uv.h")
+   file(STRINGS "${LibUV_INCLUDE_DIR}/uv.h" _LibUV_H REGEX "${_LibUV_H_REGEX}")
+ else()
