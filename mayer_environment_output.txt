@@ -1,0 +1,576 @@
+SLURM_NODELIST=#REMOVED
+BOOST_INC=/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/include
+LMOD_FAMILY_COMPILER_VERSION=7.2.0
+_ModuleTable011_=ZXJOYW1lIl09InBtaXgiLH0scG5ldGNkZj17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3LW9wZW5tcGk0L3BuZXRjZGYvMS4xMS4xIixbImZ1bGxOYW1lIl09InBuZXRjZGYvMS4xMS4xIixbImxvYWRPcmRlciJdPTE2LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InBuZXRjZGYiLH0sc2luZ3VsYXJpdHk9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWZpbGVzL3Npbmd1bGFyaXR5LzMuNS4zIixbImZ1bGxOYW1lIl09InNpbmd1bGFyaXR5LzMuNS4zIixbImxvYWRPcmRlciJdPTI2LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InNpbmd1bGFy
+SLURM_JOB_NAME=sh
+MANPATH=/opt/atse/tools/singularity/3.5.3/share/man:/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/share/man:/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/share/man:/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/share/man:/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/share/man:/opt/atse/mpi/openmpi4-gnu7/4.0.2/share/man:/opt/atse/libs/gnu7/openucx/1.7.0/share/man:/opt/atse/pmix/share/man:/opt/atse/libs/gnu7/hwloc/1.11.11/share/man:/opt/atse/libs/gnu7/numactl/2.0.12/share/man:/opt/atse/libs/gnu7/xz/5.2.4/share/man:/opt/atse/libs/gnu7/bzip2/1.0.6/share/man:/opt/atse/libs/gnu7/zlib/1.2.11/share/man:/opt/atse/compiler/gcc/7.2.0/share/man:/opt/atse/utils/binutils/2.33.1/share/man:/opt/atse/utils/git/2.19.2/share/man:/opt/atse/utils/autotools/share/man:/opt/atse/lmod/7.8.1/share/man::/opt/c3/man:/opt/clmgr/man:/opt/sgi/share/man
+__LMOD_REF_COUNT_FPATH=/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/include:1;/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/include:1;/opt/atse/libs/gnu7/openmpi4/superlu_dist/5.4.0/include:1;/opt/atse/libs/gnu7/superlu/5.2.1/include:1;/opt/atse/libs/gnu7/metis/5.1.0/include:1;/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3/include:1;/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0/include:1;/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5/include:1;/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/include:1;/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/include:1;/opt/atse/libs/gnu7/openucx/1.7.0/include:1;/opt/atse/libs/gnu7/hwloc/1.11.11/include:1;/opt/atse/libs/gnu7/numactl/2.0.12/include:1;/opt/atse/libs/gnu7/yaml-cpp/0.6.2/include:1;/opt/atse/libs/gnu7/xz/5.2.4/include:1;/opt/atse/libs/gnu7/bzip2/1.0.6/include:1;/opt/atse/libs/gnu7/zlib/1.2.11/include:1
+HOSTNAME=#REMOVED
+GUESTFISH_INIT=\e[1;34m
+HDF5_DIR=/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5
+PARMETIS_BIN=/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3/bin
+_ModuleTable003_=cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYm9vc3QiLH0sYnppcDI9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWRlcHMvZ251Ny9iemlwMi8xLjAuNiIsWyJmdWxsTmFtZSJdPSJiemlwMi8xLjAuNiIsWyJsb2FkT3JkZXIiXT03LHByb3BUPXt9LFsicmVmX2NvdW50Il09MyxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJiemlwMiIsfSxjZ25zPXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQvY2ducy8zLjQuMCIsWyJmdWxsTmFtZSJdPSJjZ25zLzMuNC4wIixbImxvYWRPcmRlciJdPTE4LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImNn
+SLURM_TOPOLOGY_ADDR=#REMOVED
+SLURMD_NODENAME=#REMOVED
+SLURM_PRIO_PROCESS=0
+NUMACTL_INC=/opt/atse/libs/gnu7/numactl/2.0.12/include
+SUPERLU_INC=/opt/atse/libs/gnu7/superlu/5.2.1/include
+_ModuleTable009_=Il09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJvcGVubXBpNCIsfSxvcGVudWN4PXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTcvb3BlbnVjeC8xLjcuMCIsWyJmdWxsTmFtZSJdPSJvcGVudWN4LzEuNy4wIixbImxvYWRPcmRlciJdPTEzLHByb3BUPXt9LFsicmVmX2NvdW50Il09MSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJvcGVudWN4Iix9LHBhcm1ldGlzPXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQvcGFybWV0aXMvNC4wLjMiLFsiZnVsbE5hbWUiXT0icGFybWV0aXMvNC4wLjMiLFsibG9hZE9yZGVyIl09MTkscHJvcFQ9e30sWyJyZWZfY291bnQiXT0xLFsic3RhY2tEZXB0aCJd
+SLURM_SRUN_COMM_PORT=35955
+SHELL=/bin/bash
+TERM=xterm-256color
+__LMOD_REF_COUNT_MODULEPATH=/opt/atse/moduledeps/openmpi4:1;/opt/atse/moduledeps/gnu7-openmpi4:1;/opt/atse/moduledeps/gnu7:1;/opt/atse/modulefiles:1
+MPICC=mpicc
+PMIX_LIB=/opt/atse/pmix/lib
+XZ_LIB=/opt/atse/libs/gnu7/xz/5.2.4/lib
+HISTSIZE=1000
+HWLOC_DIR=/opt/atse/libs/gnu7/hwloc/1.11.11
+WISECONFIGDIR=/usr/share/wise2/
+SLURM_PTY_WIN_ROW=47
+SSH_CLIENT=#REMOVED
+NETCDF_BIN=/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/bin
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+TMPDIR=/tmp
+CONDA_SHLVL=0
+LIBRARY_PATH=/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/lib:/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/lib:/opt/atse/libs/gnu7/openmpi4/superlu_dist/5.4.0/lib:/opt/atse/libs/gnu7/superlu/5.2.1/lib:/opt/atse/libs/gnu7/metis/5.1.0/lib:/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3/lib:/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0/lib:/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5/lib:/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/lib:/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/lib:/opt/atse/libs/gnu7/openucx/1.7.0/lib:/opt/atse/libs/gnu7/hwloc/1.11.11/lib:/opt/atse/libs/gnu7/numactl/2.0.12/lib:/opt/atse/libs/gnu7/yaml-cpp/0.6.2/lib:/opt/atse/libs/gnu7/xz/5.2.4/lib:/opt/atse/libs/gnu7/bzip2/1.0.6/lib:/opt/atse/libs/gnu7/zlib/1.2.11/lib
+LMOD_FAMILY_DEVPACK_VERSION=20200125
+FFTW_INC=/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/include
+OPENMPI4_BIN=/opt/atse/mpi/openmpi4-gnu7/4.0.2/bin
+LMOD_PKG=/opt/atse/lmod/lmod
+FPATH=/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/include:/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/include:/opt/atse/libs/gnu7/openmpi4/superlu_dist/5.4.0/include:/opt/atse/libs/gnu7/superlu/5.2.1/include:/opt/atse/libs/gnu7/metis/5.1.0/include:/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3/include:/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0/include:/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5/include:/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/include:/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/include:/opt/atse/libs/gnu7/openucx/1.7.0/include:/opt/atse/libs/gnu7/hwloc/1.11.11/include:/opt/atse/libs/gnu7/numactl/2.0.12/include:/opt/atse/libs/gnu7/yaml-cpp/0.6.2/include:/opt/atse/libs/gnu7/xz/5.2.4/include:/opt/atse/libs/gnu7/bzip2/1.0.6/include:/opt/atse/libs/gnu7/zlib/1.2.11/include
+LMOD_FAMILY_BOOST=boost
+PNETCDF_INC=/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/include
+BINUTILS_BIN=/opt/atse/utils/binutils/2.33.1/bin
+BINUTILS_LIB64=/opt/atse/utils/binutils/2.33.1/lib64
+LMOD_FAMILY_DEVPACK=devpack-gnu7
+LMOD_FAMILY_HDF5_VERSION=1.10.5
+NUMACTL_LIB=/opt/atse/libs/gnu7/numactl/2.0.12/lib
+PARMETIS_INC=/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3/include
+SUPERLU_LIB=/opt/atse/libs/gnu7/superlu/5.2.1/lib
+QTDIR=/usr/lib64/qt-3.3
+LMOD_VERSION=7.8.1
+QTINC=/usr/lib64/qt-3.3/include
+SSH_TTY=/dev/pts/4
+PMIX_DIR=/opt/atse/pmix
+XZ_DIR=/opt/atse/libs/gnu7/xz/5.2.4
+FFTW_DIR=/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8
+__LMOD_REF_COUNT_LOADEDMODULES=autotools:1;cmake/3.14.5:1;git/2.19.2:1;binutils/2.33.1:1;gnu7/7.2.0:1;zlib/1.2.11:1;bzip2/1.0.6:1;xz/5.2.4:1;yaml-cpp/0.6.2:1;numactl/2.0.12:1;hwloc/1.11.11:1;pmix/2.2.3:1;openucx/1.7.0:1;openmpi4/4.0.2:1;netcdf/4.6.3:1;pnetcdf/1.11.1:1;phdf5/1.10.5:1;cgns/3.4.0:1;parmetis/4.0.3:1;metis/5.1.0:1;openblas/0.3.4:1;superlu/5.2.1:1;superlu_dist/5.4.0:1;boost/1.72.0:1;fftw/3.3.8:1;singularity/3.5.3:1;devpack-gnu7/20200125:1
+_ModuleTable007_=InJlZl9jb3VudCJdPTEsWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibWV0aXMiLH0sbmV0Y2RmPXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQvbmV0Y2RmLzQuNi4zIixbImZ1bGxOYW1lIl09Im5ldGNkZi80LjYuMyIsWyJsb2FkT3JkZXIiXT0xNSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJuZXRjZGYiLH0sbnVtYWN0bD17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3L251bWFjdGwvMi4wLjEyIixbImZ1bGxOYW1lIl09Im51bWFjdGwvMi4wLjEyIixbImxvYWRPcmRlciJdPTEwLHByb3BUPXt9LFsicmVmX2NvdW50Il09
+QT_GRAPHICSSYSTEM_CHECKED=1
+SLURM_NNODES=1
+USER=USER
+BOOST_DIR=/opt/atse/libs/gnu7/openmpi4/boost/1.72.0
+CGNS_BIN=/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0/bin
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:
+HWLOC_INC=/opt/atse/libs/gnu7/hwloc/1.11.11/include
+LD_LIBRARY_PATH=/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/lib:/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/lib:/opt/atse/libs/gnu7/openmpi4/superlu_dist/5.4.0/lib:/opt/atse/libs/gnu7/superlu/5.2.1/lib:/opt/atse/libs/gnu7/openblas/0.3.4/lib:/opt/atse/libs/gnu7/metis/5.1.0/lib:/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3/lib:/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0/lib:/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5/lib:/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/lib:/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/lib:/opt/atse/mpi/openmpi4-gnu7/4.0.2/lib:/opt/atse/libs/gnu7/openucx/1.7.0/lib:/opt/atse/pmix/lib:/opt/atse/libs/gnu7/hwloc/1.11.11/lib:/opt/atse/libs/gnu7/numactl/2.0.12/lib:/opt/atse/libs/gnu7/yaml-cpp/0.6.2/lib:/opt/atse/libs/gnu7/xz/5.2.4/lib:/opt/atse/libs/gnu7/bzip2/1.0.6/lib:/opt/atse/libs/gnu7/zlib/1.2.11/lib:/opt/atse/compiler/gcc/7.2.0/lib64:/opt/atse/utils/binutils/2.33.1/lib:/opt/atse/utils/binutils/2.33.1/lib64
+LMOD_FAMILY_BOOST_VERSION=1.72.0
+METIS_LIB=/opt/atse/libs/gnu7/metis/5.1.0/lib
+NUMACTL_BIN=/opt/atse/libs/gnu7/numactl/2.0.12/bin
+OPENBLAS_DIR=/opt/atse/libs/gnu7/openblas/0.3.4
+_ModuleTable010_=PTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InBhcm1ldGlzIix9LHBoZGY1PXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQvcGhkZjUvMS4xMC41IixbImZ1bGxOYW1lIl09InBoZGY1LzEuMTAuNSIsWyJsb2FkT3JkZXIiXT0xNyxwcm9wVD17fSxbInJlZl9jb3VudCJdPTEsWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icGhkZjUiLH0scG1peD17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZmlsZXMvcG1peC8yLjIuMyIsWyJmdWxsTmFtZSJdPSJwbWl4LzIuMi4zIixbImxvYWRPcmRlciJdPTEyLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVz
+METIS_BIN=/opt/atse/libs/gnu7/metis/5.1.0/bin
+HDF5_BIN=/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5/bin
+SLURM_STEP_NUM_NODES=1
+SLURM_JOBID=141
+CPATH=/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/include:/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/include:/opt/atse/libs/gnu7/openmpi4/superlu_dist/5.4.0/include:/opt/atse/libs/gnu7/superlu/5.2.1/include:/opt/atse/libs/gnu7/metis/5.1.0/include:/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3/include:/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0/include:/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5/include:/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/include:/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/include:/opt/atse/libs/gnu7/openucx/1.7.0/include:/opt/atse/libs/gnu7/hwloc/1.11.11/include:/opt/atse/libs/gnu7/numactl/2.0.12/include:/opt/atse/libs/gnu7/yaml-cpp/0.6.2/include:/opt/atse/libs/gnu7/xz/5.2.4/include:/opt/atse/libs/gnu7/bzip2/1.0.6/include:/opt/atse/libs/gnu7/zlib/1.2.11/include
+OPENUCX_BIN=/opt/atse/libs/gnu7/openucx/1.7.0/bin
+YAML_CPP_INC=/opt/atse/libs/gnu7/yaml-cpp/0.6.2/include
+_ModuleTable004_=bnMiLH0sY21ha2U9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWZpbGVzL2NtYWtlLzMuMTQuNSIsWyJmdWxsTmFtZSJdPSJjbWFrZS8zLjE0LjUiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJjbWFrZSIsfSxbImRldnBhY2stZ251NyJdPXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVmaWxlcy9kZXZwYWNrLWdudTcvMjAyMDAxMjUiLFsiZnVsbE5hbWUiXT0iZGV2cGFjay1nbnU3LzIwMjAwMTI1IixbImxvYWRPcmRlciJdPTI3LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImRldnBhY2stZ251NyIsfSxmZnR3PXtbImZuIl09
+OSCAR_HOME=/opt/oscar
+SRUN_DEBUG=3
+CGNS_LIB=/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0/lib
+__LMOD_REF_COUNT__LMFILES_=/opt/atse/modulefiles/autotools:1;/opt/atse/modulefiles/cmake/3.14.5:1;/opt/atse/modulefiles/git/2.19.2:1;/opt/atse/modulefiles/binutils/2.33.1:1;/opt/atse/modulefiles/gnu7/7.2.0:1;/opt/atse/moduledeps/gnu7/zlib/1.2.11:1;/opt/atse/moduledeps/gnu7/bzip2/1.0.6:1;/opt/atse/moduledeps/gnu7/xz/5.2.4:1;/opt/atse/moduledeps/gnu7/yaml-cpp/0.6.2:1;/opt/atse/moduledeps/gnu7/numactl/2.0.12:1;/opt/atse/moduledeps/gnu7/hwloc/1.11.11:1;/opt/atse/modulefiles/pmix/2.2.3:1;/opt/atse/moduledeps/gnu7/openucx/1.7.0:1;/opt/atse/moduledeps/gnu7/openmpi4/4.0.2:1;/opt/atse/moduledeps/gnu7-openmpi4/netcdf/4.6.3:1;/opt/atse/moduledeps/gnu7-openmpi4/pnetcdf/1.11.1:1;/opt/atse/moduledeps/gnu7-openmpi4/phdf5/1.10.5:1;/opt/atse/moduledeps/gnu7-openmpi4/cgns/3.4.0:1;/opt/atse/moduledeps/gnu7-openmpi4/parmetis/4.0.3:1;/opt/atse/moduledeps/gnu7/metis/5.1.0:1;/opt/atse/moduledeps/gnu7/openblas/0.3.4:1;/opt/atse/moduledeps/gnu7/superlu/5.2.1:1;/opt/atse/moduledeps/gnu7-openmpi4/superlu_dist/5.4.0:1;/opt/atse/moduledeps/gnu7-openmpi4/boost/1.72.0:1;/opt/atse/moduledeps/gnu7-openmpi4/fftw/3.3.8:1;/opt/atse/modulefiles/singularity/3.5.3:1;/opt/atse/modulefiles/devpack-gnu7/20200125:1
+PNETCDF_BIN=/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/bin
+HWLOC_BIN=/opt/atse/libs/gnu7/hwloc/1.11.11/bin
+OPENUCX_INC=/opt/atse/libs/gnu7/openucx/1.7.0/include
+SLURM_LAUNCH_NODE_IPADDR=194.1.0.145
+METIS_DIR=/opt/atse/libs/gnu7/metis/5.1.0
+_ModuleTable013_=fSx4ej17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3L3h6LzUuMi40IixbImZ1bGxOYW1lIl09Inh6LzUuMi40IixbImxvYWRPcmRlciJdPTgscHJvcFQ9e30sWyJyZWZfY291bnQiXT0yLFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Inh6Iix9LFsieWFtbC1jcHAiXT17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3L3lhbWwtY3BwLzAuNi4yIixbImZ1bGxOYW1lIl09InlhbWwtY3BwLzAuNi4yIixbImxvYWRPcmRlciJdPTkscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ieWFtbC1jcHAiLH0semxpYj17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxl
+SLURM_STEP_ID=0
+GUESTFISH_PS1=\[\e[1;32m\]><fs>\[\e[0;31m\]
+LMOD_PREPEND_BLOCK=normal
+LMOD_FAMILY_MPI_VERSION=4.0.2
+PMIX_INC=/opt/atse/pmix/include
+SUPERLU_DIST_DIR=/opt/atse/libs/gnu7/openmpi4/superlu_dist/5.4.0
+XZ_INC=/opt/atse/libs/gnu7/xz/5.2.4/include
+OPENMPI4_DIR=/opt/atse/mpi/openmpi4-gnu7/4.0.2
+SLURM_TASKS_PER_NODE=56
+PATH=/ascldap/users/USER/bin:/ascldap/users/USER/.local/bin:/opt/clmgr/sbin:/opt/clmgr/bin:/opt/sgi/sbin:/opt/sgi/bin:/usr/lib64/qt-3.3/bin:/opt/atse/tools/singularity/3.5.3/bin:/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/bin:/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/bin:/opt/atse/libs/gnu7/openmpi4/superlu_dist/5.4.0/bin:/opt/atse/libs/gnu7/openblas/0.3.4/bin:/opt/atse/libs/gnu7/metis/5.1.0/bin:/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3/bin:/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0/bin:/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5/bin:/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/bin:/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/bin:/opt/atse/mpi/openmpi4-gnu7/4.0.2/bin:/opt/atse/libs/gnu7/openucx/1.7.0/bin:/opt/atse/libs/gnu7/hwloc/1.11.11/bin:/opt/atse/libs/gnu7/numactl/2.0.12/bin:/opt/atse/libs/gnu7/xz/5.2.4/bin:/opt/atse/libs/gnu7/bzip2/1.0.6/bin:/opt/atse/libs/gnu7/zlib/1.2.11/bin:/opt/atse/compiler/gcc/7.2.0/bin:/opt/atse/utils/binutils/2.33.1/bin:/opt/atse/utils/git/2.19.2/bin:/opt/atse/utils/cmake/3.14.5/bin:/opt/atse/utils/autotools/bin:/usr/condabin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/c3/bin:/opt/ibutils/bin:/sbin:/bin
+MAIL=/var/spool/mail/USER
+_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbIk1QSSJdPSJvcGVubXBpNCIsWyJib29zdCJdPSJib29zdCIsWyJjb21waWxlciJdPSJnbnU3IixbImRldnBhY2siXT0iZGV2cGFjay1nbnU3IixbImhkZjUiXT0icGhkZjUiLFsibWV0aXMiXT0ibWV0aXMiLFsib3BlbmJsYXMiXT0ib3BlbmJsYXMiLFsicGFybWV0aXMiXT0icGFybWV0aXMiLH0sbVQ9e2F1dG90b29scz17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZmlsZXMvYXV0b3Rvb2xzIixbImZ1bGxOYW1lIl09ImF1dG90b29scyIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic3RhY2tEZXB0aCJd
+SLURM_STEP_LAUNCHER_PORT=35955
+PNETCDF_DIR=/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1
+SLURM_WORKING_CLUSTER=#REMOVED
+_=/usr/bin/env
+SLURM_JOB_ID=141
+BZIP2_LIB=/opt/atse/libs/gnu7/bzip2/1.0.6/lib
+ZLIB_DIR=/opt/atse/libs/gnu7/zlib/1.2.11
+_ModuleTable014_=ZGVwcy9nbnU3L3psaWIvMS4yLjExIixbImZ1bGxOYW1lIl09InpsaWIvMS4yLjExIixbImxvYWRPcmRlciJdPTYscHJvcFQ9e30sWyJyZWZfY291bnQiXT05LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InpsaWIiLH0sfSxtcGF0aEE9eyIvb3B0L2F0c2UvbW9kdWxlZGVwcy9vcGVubXBpNCIsIi9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQiLCIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3IiwiL29wdC9hdHNlL21vZHVsZWZpbGVzIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9vcHQvYXRzZS9tb2R1bGVmaWxlcyIsfQ==
+LMOD_SETTARG_CMD=:
+PWD=/ascldap/users/USER
+F90=gfortran
+ZLIB_BIN=/opt/atse/libs/gnu7/zlib/1.2.11/bin
+SLURM_STEPID=0
+SLURM_JOB_USER=USER
+BINUTILS_DIR=/opt/atse/utils/binutils/2.33.1
+_LMFILES_=/opt/atse/modulefiles/autotools:/opt/atse/modulefiles/cmake/3.14.5:/opt/atse/modulefiles/git/2.19.2:/opt/atse/modulefiles/binutils/2.33.1:/opt/atse/modulefiles/gnu7/7.2.0:/opt/atse/moduledeps/gnu7/zlib/1.2.11:/opt/atse/moduledeps/gnu7/bzip2/1.0.6:/opt/atse/moduledeps/gnu7/xz/5.2.4:/opt/atse/moduledeps/gnu7/yaml-cpp/0.6.2:/opt/atse/moduledeps/gnu7/numactl/2.0.12:/opt/atse/moduledeps/gnu7/hwloc/1.11.11:/opt/atse/modulefiles/pmix/2.2.3:/opt/atse/moduledeps/gnu7/openucx/1.7.0:/opt/atse/moduledeps/gnu7/openmpi4/4.0.2:/opt/atse/moduledeps/gnu7-openmpi4/netcdf/4.6.3:/opt/atse/moduledeps/gnu7-openmpi4/pnetcdf/1.11.1:/opt/atse/moduledeps/gnu7-openmpi4/phdf5/1.10.5:/opt/atse/moduledeps/gnu7-openmpi4/cgns/3.4.0:/opt/atse/moduledeps/gnu7-openmpi4/parmetis/4.0.3:/opt/atse/moduledeps/gnu7/metis/5.1.0:/opt/atse/moduledeps/gnu7/openblas/0.3.4:/opt/atse/moduledeps/gnu7/superlu/5.2.1:/opt/atse/moduledeps/gnu7-openmpi4/superlu_dist/5.4.0:/opt/atse/moduledeps/gnu7-openmpi4/boost/1.72.0:/opt/atse/moduledeps/gnu7-openmpi4/fftw/3.3.8:/opt/atse/modulefiles/singularity/3.5.3:/opt/atse/modulefiles/devpack-gnu7/20200125
+SLURM_SRUN_COMM_HOST=194.1.0.145
+YAML_CPP_LIB=/opt/atse/libs/gnu7/yaml-cpp/0.6.2/lib
+LANG=en_US.UTF-8
+OPENMPI4_LIB=/opt/atse/mpi/openmpi4-gnu7/4.0.2/lib
+MODULEPATH=/opt/atse/moduledeps/openmpi4:/opt/atse/moduledeps/gnu7-openmpi4:/opt/atse/moduledeps/gnu7:/opt/atse/modulefiles
+MPIFC=mpifort
+PARMETIS_LIB=/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3/lib
+SLURM_UMASK=0002
+SLURM_PTY_WIN_COL=89
+GUESTFISH_OUTPUT=\e[0m
+KDEDIRS=/usr
+LOADEDMODULES=autotools:cmake/3.14.5:git/2.19.2:binutils/2.33.1:gnu7/7.2.0:zlib/1.2.11:bzip2/1.0.6:xz/5.2.4:yaml-cpp/0.6.2:numactl/2.0.12:hwloc/1.11.11:pmix/2.2.3:openucx/1.7.0:openmpi4/4.0.2:netcdf/4.6.3:pnetcdf/1.11.1:phdf5/1.10.5:cgns/3.4.0:parmetis/4.0.3:metis/5.1.0:openblas/0.3.4:superlu/5.2.1:superlu_dist/5.4.0:boost/1.72.0:fftw/3.3.8:singularity/3.5.3:devpack-gnu7/20200125
+NETCDF_LIB=/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/lib
+SUPERLU_DIST_INC=/opt/atse/libs/gnu7/openmpi4/superlu_dist/5.4.0/include
+_ModuleTable_Sz_=14
+SLURM_JOB_UID=95271
+BZIP2_DIR=/opt/atse/libs/gnu7/bzip2/1.0.6
+ZLIB_LIB=/opt/atse/libs/gnu7/zlib/1.2.11/lib
+SLURM_NODEID=0
+SLURM_SUBMIT_DIR=/home/USER
+F77=gfortran
+XZ_BIN=/opt/atse/libs/gnu7/xz/5.2.4/bin
+C3_RSH=#REMOVED
+LMOD_CMD=/opt/atse/lmod/lmod/libexec/lmod
+BOOST_LIB=/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/lib
+SINGULARITY_DIR=/opt/atse/tools/singularity/3.5.3
+_ModuleTable005_=Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQvZmZ0dy8zLjMuOCIsWyJmdWxsTmFtZSJdPSJmZnR3LzMuMy44IixbImxvYWRPcmRlciJdPTI1LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImZmdHciLH0sZ2l0PXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVmaWxlcy9naXQvMi4xOS4yIixbImZ1bGxOYW1lIl09ImdpdC8yLjE5LjIiLFsibG9hZE9yZGVyIl09Myxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJnaXQiLH0sZ251Nz17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZmlsZXMvZ251Ny83LjIuMCIsWyJmdWxsTmFtZSJdPSJnbnU3Lzcu
+SLURM_TASK_PID=107996
+BINUTILS_LIB=/opt/atse/utils/binutils/2.33.1/lib
+CGNS_INC=/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0/include
+SLURM_DISTRIBUTION=cyclic
+SLURM_CPUS_ON_NODE=56
+KRB5CCNAME=FILE:/tmp/krb5cc_95271_lFB9l1
+HISTCONTROL=ignoreboth
+SSH_ASKPASS=#REMOVED
+CXX=g++
+HDF5_LIB=/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5/lib
+YAML_CPP_DIR=/opt/atse/libs/gnu7/yaml-cpp/0.6.2
+SLURM_PROCID=0
+SLURM_JOB_NODELIST=#REMOVED
+HOME=/ascldap/users/USER
+SHLVL=4
+LMOD_FAMILY_HDF5=phdf5
+OHPC_MPI_LAUNCHERS=pmix_v2
+_ModuleTable012_=aXR5Iix9LHN1cGVybHU9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWRlcHMvZ251Ny9zdXBlcmx1LzUuMi4xIixbImZ1bGxOYW1lIl09InN1cGVybHUvNS4yLjEiLFsibG9hZE9yZGVyIl09MjIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ic3VwZXJsdSIsfSxzdXBlcmx1X2Rpc3Q9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWRlcHMvZ251Ny1vcGVubXBpNC9zdXBlcmx1X2Rpc3QvNS40LjAiLFsiZnVsbE5hbWUiXT0ic3VwZXJsdV9kaXN0LzUuNC4wIixbImxvYWRPcmRlciJdPTIzLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InN1cGVybHVfZGlzdCIs
+SLURM_PTY_PORT=36649
+NETCDF_DIR=/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3
+__LMOD_REF_COUNT_PATH=/opt/atse/tools/singularity/3.5.3/bin:1;/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/bin:1;/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/bin:1;/opt/atse/libs/gnu7/openmpi4/superlu_dist/5.4.0/bin:1;/opt/atse/libs/gnu7/openblas/0.3.4/bin:1;/opt/atse/libs/gnu7/metis/5.1.0/bin:1;/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3/bin:1;/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0/bin:1;/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5/bin:1;/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/bin:1;/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/bin:1;/opt/atse/mpi/openmpi4-gnu7/4.0.2/bin:1;/opt/atse/libs/gnu7/openucx/1.7.0/bin:1;/opt/atse/libs/gnu7/hwloc/1.11.11/bin:1;/opt/atse/libs/gnu7/numactl/2.0.12/bin:1;/opt/atse/libs/gnu7/xz/5.2.4/bin:1;/opt/atse/libs/gnu7/bzip2/1.0.6/bin:1;/opt/atse/libs/gnu7/zlib/1.2.11/bin:1;/opt/atse/compiler/gcc/7.2.0/bin:1;/opt/atse/utils/binutils/2.33.1/bin:1;/opt/atse/utils/git/2.19.2/bin:1;/opt/atse/utils/cmake/3.14.5/bin:1;/opt/atse/utils/autotools/bin:1;/usr/condabin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/opt/c3/bin:1;/opt/ibutils/bin:1
+LANGUAGE=en_US.UTF-8
+SLURM_LOCALID=0
+BINUTILS_INC=/opt/atse/utils/binutils/2.33.1/include
+CGNS_DIR=/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0
+__LMOD_REF_COUNT_CPATH=/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/include:1;/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/include:1;/opt/atse/libs/gnu7/openmpi4/superlu_dist/5.4.0/include:1;/opt/atse/libs/gnu7/superlu/5.2.1/include:1;/opt/atse/libs/gnu7/metis/5.1.0/include:1;/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3/include:1;/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0/include:1;/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5/include:1;/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/include:1;/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/include:1;/opt/atse/libs/gnu7/openucx/1.7.0/include:1;/opt/atse/libs/gnu7/hwloc/1.11.11/include:1;/opt/atse/libs/gnu7/numactl/2.0.12/include:1;/opt/atse/libs/gnu7/yaml-cpp/0.6.2/include:1;/opt/atse/libs/gnu7/xz/5.2.4/include:1;/opt/atse/libs/gnu7/bzip2/1.0.6/include:1;/opt/atse/libs/gnu7/zlib/1.2.11/include:1
+SLURM_CLUSTER_NAME=#REMOVED
+SLURM_JOB_CPUS_PER_NODE=56
+MPI_DIR=/opt/atse/mpi/openmpi4-gnu7/4.0.2
+OPENUCX_LIB=/opt/atse/libs/gnu7/openucx/1.7.0/lib
+_ModuleTable002_=PTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImF1dG90b29scyIsfSxiaW51dGlscz17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZmlsZXMvYmludXRpbHMvMi4zMy4xIixbImZ1bGxOYW1lIl09ImJpbnV0aWxzLzIuMzMuMSIsWyJsb2FkT3JkZXIiXT00LHByb3BUPXt9LFsicmVmX2NvdW50Il09MSxbInN0YWNrRGVwdGgiXT0yLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJiaW51dGlscyIsfSxib29zdD17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3LW9wZW5tcGk0L2Jvb3N0LzEuNzIuMCIsWyJmdWxsTmFtZSJdPSJib29zdC8xLjcyLjAiLFsibG9hZE9yZGVyIl09MjQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1
+SLURM_JOB_GID=95271
+SLURM_SUBMIT_HOST=#REMOVED
+FC=gfortran
+__LMOD_REF_COUNT_INCLUDE=/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/include:1;/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/include:1;/opt/atse/libs/gnu7/openmpi4/superlu_dist/5.4.0/include:1;/opt/atse/libs/gnu7/superlu/5.2.1/include:1;/opt/atse/libs/gnu7/openblas/0.3.4/include:1;/opt/atse/libs/gnu7/metis/5.1.0/include:1;/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3/include:1;/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0/include:1;/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5/include:1;/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/include:1;/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/include:1;/opt/atse/libs/gnu7/openucx/1.7.0/include:1;/opt/atse/pmix/include:1;/opt/atse/libs/gnu7/hwloc/1.11.11/include:1;/opt/atse/libs/gnu7/numactl/2.0.12/include:1;/opt/atse/libs/gnu7/yaml-cpp/0.6.2/include:1;/opt/atse/libs/gnu7/xz/5.2.4/include:1;/opt/atse/libs/gnu7/bzip2/1.0.6/include:1;/opt/atse/libs/gnu7/zlib/1.2.11/include:1;/opt/atse/compiler/gcc/7.2.0/include:1;/opt/atse/utils/binutils/2.33.1/include:1
+LMOD_FAMILY_METIS_VERSION=5.1.0
+LMOD_FAMILY_OPENBLAS_VERSION=0.3.4
+SLURM_GTIDS=0
+SLURM_JOB_PARTITION=batch
+BASH_ENV=/opt/atse/lmod/lmod/init/bash
+BZIP2_INC=/opt/atse/libs/gnu7/bzip2/1.0.6/include
+_ModuleTable008_=NCxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJudW1hY3RsIix9LG9wZW5ibGFzPXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTcvb3BlbmJsYXMvMC4zLjQiLFsiZnVsbE5hbWUiXT0ib3BlbmJsYXMvMC4zLjQiLFsibG9hZE9yZGVyIl09MjEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ib3BlbmJsYXMiLH0sb3Blbm1waTQ9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWRlcHMvZ251Ny9vcGVubXBpNC80LjAuMiIsWyJmdWxsTmFtZSJdPSJvcGVubXBpNC80LjAuMiIsWyJsb2FkT3JkZXIiXT0xNCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVz
+LOGNAME=USER
+LMOD_FAMILY_PARMETIS=parmetis
+SUPERLU_DIST_LIB=/opt/atse/libs/gnu7/openmpi4/superlu_dist/5.4.0/lib
+CVS_RSH=ssh
+BOOST_ROOT=/opt/atse/libs/gnu7/openmpi4/boost/1.72.0
+LMOD_FAMILY_METIS=metis
+LMOD_FAMILY_OPENBLAS=openblas
+MPIF77=mpif77
+NUMACTL_DIR=/opt/atse/libs/gnu7/numactl/2.0.12
+SUPERLU_DIR=/opt/atse/libs/gnu7/superlu/5.2.1
+QTLIB=/usr/lib64/qt-3.3/lib
+SLURM_STEP_NUM_TASKS=1
+SSH_CONNECTION=#REMOVED
+XDG_DATA_DIRS=/ascldap/users/USER/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+SLURM_JOB_NUM_NODES=1
+MODULESHOME=/opt/atse/lmod/lmod
+__LMOD_REF_COUNT_LIBRARY_PATH=/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/lib:1;/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/lib:1;/opt/atse/libs/gnu7/openmpi4/superlu_dist/5.4.0/lib:1;/opt/atse/libs/gnu7/superlu/5.2.1/lib:1;/opt/atse/libs/gnu7/metis/5.1.0/lib:1;/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3/lib:1;/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0/lib:1;/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5/lib:1;/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/lib:1;/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/lib:1;/opt/atse/libs/gnu7/openucx/1.7.0/lib:1;/opt/atse/libs/gnu7/hwloc/1.11.11/lib:1;/opt/atse/libs/gnu7/numactl/2.0.12/lib:1;/opt/atse/libs/gnu7/yaml-cpp/0.6.2/lib:1;/opt/atse/libs/gnu7/xz/5.2.4/lib:1;/opt/atse/libs/gnu7/bzip2/1.0.6/lib:1;/opt/atse/libs/gnu7/zlib/1.2.11/lib:1
+PNETCDF_LIB=/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/lib
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+LMOD_SETTARG_FULL_SUPPORT=no
+FFTW_LIB=/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/lib
+__LMOD_REF_COUNT_LD_LIBRARY_PATH=/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/lib:1;/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/lib:1;/opt/atse/libs/gnu7/openmpi4/superlu_dist/5.4.0/lib:1;/opt/atse/libs/gnu7/superlu/5.2.1/lib:1;/opt/atse/libs/gnu7/openblas/0.3.4/lib:1;/opt/atse/libs/gnu7/metis/5.1.0/lib:1;/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3/lib:1;/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0/lib:1;/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5/lib:1;/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/lib:1;/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/lib:1;/opt/atse/mpi/openmpi4-gnu7/4.0.2/lib:1;/opt/atse/libs/gnu7/openucx/1.7.0/lib:1;/opt/atse/pmix/lib:1;/opt/atse/libs/gnu7/hwloc/1.11.11/lib:1;/opt/atse/libs/gnu7/numactl/2.0.12/lib:1;/opt/atse/libs/gnu7/yaml-cpp/0.6.2/lib:1;/opt/atse/libs/gnu7/xz/5.2.4/lib:1;/opt/atse/libs/gnu7/bzip2/1.0.6/lib:1;/opt/atse/libs/gnu7/zlib/1.2.11/lib:1;/opt/atse/compiler/gcc/7.2.0/lib64:1;/opt/atse/utils/binutils/2.33.1/lib:1;/opt/atse/utils/binutils/2.33.1/lib64:1
+METIS_INC=/opt/atse/libs/gnu7/metis/5.1.0/include
+PKG_CONFIG_PATH=/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/lib/pkgconfig:/opt/atse/mpi/openmpi4-gnu7/4.0.2/lib/pkgconfig
+OPENUCX_DIR=/opt/atse/libs/gnu7/openucx/1.7.0
+SLURM_STEP_TASKS_PER_NODE=1
+LMOD_FULL_SETTARG_SUPPORT=no
+BZIP2_BIN=/opt/atse/libs/gnu7/bzip2/1.0.6/bin
+LMOD_FAMILY_COMPILER=gnu7
+USE_PCM_DB=2
+SLURM_STEP_NODELIST=#REMOVED
+CC=gcc
+LMOD_FAMILY_PARMETIS_VERSION=4.0.3
+OPENBLAS_LIB=/opt/atse/libs/gnu7/openblas/0.3.4/lib
+__LMOD_REF_COUNT_PKG_CONFIG_PATH=/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/lib/pkgconfig:1;/opt/atse/mpi/openmpi4-gnu7/4.0.2/lib/pkgconfig:1
+ZLIB_INC=/opt/atse/libs/gnu7/zlib/1.2.11/include
+QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+NETCDF_INC=/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/include
+LMOD_DIR=/opt/atse/lmod/lmod/libexec
+INCLUDE=/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/include:/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/include:/opt/atse/libs/gnu7/openmpi4/superlu_dist/5.4.0/include:/opt/atse/libs/gnu7/superlu/5.2.1/include:/opt/atse/libs/gnu7/openblas/0.3.4/include:/opt/atse/libs/gnu7/metis/5.1.0/include:/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3/include:/opt/atse/libs/gnu7/openmpi4/cgns/3.4.0/include:/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5/include:/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/include:/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/include:/opt/atse/libs/gnu7/openucx/1.7.0/include:/opt/atse/pmix/include:/opt/atse/libs/gnu7/hwloc/1.11.11/include:/opt/atse/libs/gnu7/numactl/2.0.12/include:/opt/atse/libs/gnu7/yaml-cpp/0.6.2/include:/opt/atse/libs/gnu7/xz/5.2.4/include:/opt/atse/libs/gnu7/bzip2/1.0.6/include:/opt/atse/libs/gnu7/zlib/1.2.11/include:/opt/atse/compiler/gcc/7.2.0/include:/opt/atse/utils/binutils/2.33.1/include
+__LMOD_REF_COUNT_MANPATH=/opt/atse/tools/singularity/3.5.3/share/man:1;/opt/atse/libs/gnu7/openmpi4/fftw/3.3.8/share/man:1;/opt/atse/libs/gnu7/openmpi4/boost/1.72.0/share/man:1;/opt/atse/libs/gnu7/openmpi4/pnetcdf/1.11.1/share/man:1;/opt/atse/libs/gnu7/openmpi4/netcdf/4.6.3/share/man:1;/opt/atse/mpi/openmpi4-gnu7/4.0.2/share/man:1;/opt/atse/libs/gnu7/openucx/1.7.0/share/man:1;/opt/atse/pmix/share/man:1;/opt/atse/libs/gnu7/hwloc/1.11.11/share/man:1;/opt/atse/libs/gnu7/numactl/2.0.12/share/man:1;/opt/atse/libs/gnu7/xz/5.2.4/share/man:1;/opt/atse/libs/gnu7/bzip2/1.0.6/share/man:1;/opt/atse/libs/gnu7/zlib/1.2.11/share/man:1;/opt/atse/compiler/gcc/7.2.0/share/man:1;/opt/atse/utils/binutils/2.33.1/share/man:1;/opt/atse/utils/git/2.19.2/share/man:1;/opt/atse/utils/autotools/share/man:1;/opt/atse/lmod/7.8.1/share/man:1;/opt/c3/man:1
+_ModuleTable006_=Mi4wIixbImxvYWRPcmRlciJdPTUscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZ251NyIsfSxod2xvYz17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3L2h3bG9jLzEuMTEuMTEiLFsiZnVsbE5hbWUiXT0iaHdsb2MvMS4xMS4xMSIsWyJsb2FkT3JkZXIiXT0xMSxwcm9wVD17fSxbInJlZl9jb3VudCJdPTIsWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaHdsb2MiLH0sbWV0aXM9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWRlcHMvZ251Ny9tZXRpcy81LjEuMCIsWyJmdWxsTmFtZSJdPSJtZXRpcy81LjEuMCIsWyJsb2FkT3JkZXIiXT0yMCxwcm9wVD17fSxb
+GUESTFISH_RESTORE=\e[0m
+MPIF90=mpif90
+OPENMPI4_INC=/opt/atse/mpi/openmpi4-gnu7/4.0.2/include
+PARMETIS_DIR=/opt/atse/libs/gnu7/openmpi4/parmetis/4.0.3
+LMOD_COLORIZE=no
+HDF5_INC=/opt/atse/libs/gnu7/openmpi4/hdf5/1.10.5/include
+LMOD_FAMILY_MPI=openmpi4
+HWLOC_LIB=/opt/atse/libs/gnu7/hwloc/1.11.11/lib
+MPICXX=mpicxx
+OPENBLAS_INC=/opt/atse/libs/gnu7/openblas/0.3.4/include
+SINGULARITY_BIN=/opt/atse/tools/singularity/3.5.3/bin
+BASH_FUNC_module()=() {  eval $($LMOD_CMD bash "$@") && eval $(${LMOD_SETTARG_CMD:-:} -s sh)
+}
+BASH_FUNC_ml()=() {  eval $($LMOD_DIR/ml_cmd "$@")
+}
++ lsb_release -a
+LSB Version:	:core-4.1-aarch64:core-4.1-noarch:cxx-4.1-aarch64:cxx-4.1-noarch:desktop-4.1-aarch64:desktop-4.1-noarch:languages-4.1-aarch64:languages-4.1-noarch:printing-4.1-aarch64:printing-4.1-noarch
+Distributor ID:	RedHatEnterpriseServer
+Description:	Red Hat Enterprise Linux Server release 7.6 (Maipo)
+Release:	7.6
+Codename:	Maipo
++ uname -a
+Linux #REMOVED 4.14.0-115.16.1.1chaos.ch6a.aarch64 #1 SMP Mon Dec 16 14:19:44 PST 2019 aarch64 aarch64 aarch64 GNU/Linux
++ lscpu
+Architecture:          aarch64
+Byte Order:            Little Endian
+CPU(s):                112
+On-line CPU(s) list:   0-111
+Thread(s) per core:    2
+Core(s) per socket:    28
+Socket(s):             2
+NUMA node(s):          2
+Model:                 0
+CPU max MHz:           2500.0000
+CPU min MHz:           1000.0000
+BogoMIPS:              400.00
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              32768K
+NUMA node0 CPU(s):     0-55
+NUMA node1 CPU(s):     56-111
+Flags:                 fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics cpuid asimdrdm
++ cat /proc/meminfo
+MemTotal:       267637504 kB
+MemFree:        256833984 kB
+MemAvailable:   260854016 kB
+Buffers:               0 kB
+Cached:          5685504 kB
+SwapCached:            0 kB
+Active:          2504960 kB
+Inactive:        3310528 kB
+Active(anon):     263232 kB
+Inactive(anon):   309376 kB
+Active(file):    2241728 kB
+Inactive(file):  3001152 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:        130816 kB
+Mapped:            34240 kB
+Shmem:            442624 kB
+Slab:            1904000 kB
+SReclaimable:     451648 kB
+SUnreclaim:      1452352 kB
+KernelStack:       91840 kB
+PageTables:         3136 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    133818752 kB
+Committed_AS:     611136 kB
+VmallocTotal:   133009637312 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:     524288 kB
++ inxi -F -c0
+./collect_environment.sh: line 14: inxi: command not found
++ lsblk -a
+NAME MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sdf    8:80   1        0 disk
+sdd    8:48   1        0 disk
+sdb    8:16   1        0 disk
+sr2   11:2    1 1024M  0 rom
+sr0   11:0    1 1024M  0 rom
+sdg    8:96   1        0 disk
+sde    8:64   1        0 disk
+sdc    8:32   1        0 disk
+sda    8:0    1        0 disk
+sr3   11:3    1 1024M  0 rom
+sr1   11:1    1 1024M  0 rom
+sdh    8:112  1        0 disk
++ lsscsi -s
+[4:0:0:0]    cd/dvd  AMI      Virtual CDROM0   1.00  /dev/sr0        -
+[4:0:0:1]    cd/dvd  AMI      Virtual CDROM1   1.00  /dev/sr1        -
+[4:0:0:2]    cd/dvd  AMI      Virtual CDROM2   1.00  /dev/sr2        -
+[4:0:0:3]    cd/dvd  AMI      Virtual CDROM3   1.00  /dev/sr3        -
+[5:0:0:0]    disk    AMI      Virtual Floppy0  1.00  /dev/sda        -
+[5:0:0:1]    disk    AMI      Virtual Floppy1  1.00  /dev/sdb        -
+[5:0:0:2]    disk    AMI      Virtual Floppy2  1.00  /dev/sdc        -
+[5:0:0:3]    disk    AMI      Virtual Floppy3  1.00  /dev/sdd        -
+[6:0:0:0]    disk    AMI      Virtual HDisk0   1.00  /dev/sde        -
+[6:0:0:1]    disk    AMI      Virtual HDisk1   1.00  /dev/sdf        -
+[6:0:0:2]    disk    AMI      Virtual HDisk2   1.00  /dev/sdg        -
+[6:0:0:3]    disk    AMI      Virtual HDisk3   1.00  /dev/sdh        -
++ module list
+++ /opt/atse/lmod/lmod/libexec/lmod bash list
++ eval echo ''\'''\'';' echo ''\''Currently'\''' ''\''Loaded'\''' ''\''Modules:'\'';' echo ''\'''\''' ''\'''\''' ''\''1)'\''' ''\''autotools'\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\''8)'\''' ''\''xz/5.2.4'\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\''15)'\''' ''\''netcdf/4.6.3'\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\''22)'\''' ''\''superlu/5.2.1'\'';' echo ''\'''\''' ''\'''\''' ''\''2)'\''' ''\''cmake/3.14.5'\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\''9)'\''' ''\''yaml-cpp/0.6.2'\''' ''\'''\''' ''\''16)'\''' ''\''pnetcdf/1.11.1'\''' ''\'''\''' ''\''23)'\''' ''\''superlu_dist/5.4.0'\'';' echo ''\'''\''' ''\'''\''' ''\''3)'\''' ''\''git/2.19.2'\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\''10)'\''' ''\''numactl/2.0.12'\''' ''\'''\''' ''\''17)'\''' ''\''phdf5/1.10.5'\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\''24)'\''' ''\''boost/1.72.0'\'';' echo ''\'''\''' ''\'''\''' ''\''4)'\''' ''\''binutils/2.33.1'\''' ''\'''\''' ''\''11)'\''' ''\''hwloc/1.11.11'\''' ''\'''\''' ''\'''\''' ''\''18)'\''' ''\''cgns/3.4.0'\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\''25)'\''' ''\''fftw/3.3.8'\'';' echo ''\'''\''' ''\'''\''' ''\''5)'\''' ''\''gnu7/7.2.0'\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\''12)'\''' ''\''pmix/2.2.3'\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\''19)'\''' ''\''parmetis/4.0.3'\''' ''\'''\''' ''\''26)'\''' ''\''singularity/3.5.3'\'';' echo ''\'''\''' ''\'''\''' ''\''6)'\''' ''\''zlib/1.2.11'\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\''13)'\''' ''\''openucx/1.7.0'\''' ''\'''\''' ''\'''\''' ''\''20)'\''' ''\''metis/5.1.0'\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\''27)'\''' ''\''devpack-gnu7/20200125'\'';' echo ''\'''\''' ''\'''\''' ''\''7)'\''' ''\''bzip2/1.0.6'\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\'''\''' ''\''14)'\''' ''\''openmpi4/4.0.2'\''' ''\'''\''' ''\''21)'\''' ''\''openblas/0.3.4'\'';' echo ''\'''\'';' echo ''\'''\''' ''\'''\'';' echo ''\'''\'';' 'MODULEPATH=/opt/atse/moduledeps/openmpi4:/opt/atse/moduledeps/gnu7-openmpi4:/opt/atse/moduledeps/gnu7:/opt/atse/modulefiles;' export 'MODULEPATH;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbIk1QSSJdPSJvcGVubXBpNCIsWyJib29zdCJdPSJib29zdCIsWyJjb21waWxlciJdPSJnbnU3IixbImRldnBhY2siXT0iZGV2cGFjay1nbnU3IixbImhkZjUiXT0icGhkZjUiLFsibWV0aXMiXT0ibWV0aXMiLFsib3BlbmJsYXMiXT0ib3BlbmJsYXMiLFsicGFybWV0aXMiXT0icGFybWV0aXMiLH0sbVQ9e2F1dG90b29scz17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZmlsZXMvYXV0b3Rvb2xzIixbImZ1bGxOYW1lIl09ImF1dG90b29scyIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic3RhY2tEZXB0aCJd;' export '_ModuleTable001_;' '_ModuleTable002_=PTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImF1dG90b29scyIsfSxiaW51dGlscz17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZmlsZXMvYmludXRpbHMvMi4zMy4xIixbImZ1bGxOYW1lIl09ImJpbnV0aWxzLzIuMzMuMSIsWyJsb2FkT3JkZXIiXT00LHByb3BUPXt9LFsicmVmX2NvdW50Il09MSxbInN0YWNrRGVwdGgiXT0yLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJiaW51dGlscyIsfSxib29zdD17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3LW9wZW5tcGk0L2Jvb3N0LzEuNzIuMCIsWyJmdWxsTmFtZSJdPSJib29zdC8xLjcyLjAiLFsibG9hZE9yZGVyIl09MjQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1;' export '_ModuleTable002_;' '_ModuleTable003_=cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYm9vc3QiLH0sYnppcDI9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWRlcHMvZ251Ny9iemlwMi8xLjAuNiIsWyJmdWxsTmFtZSJdPSJiemlwMi8xLjAuNiIsWyJsb2FkT3JkZXIiXT03LHByb3BUPXt9LFsicmVmX2NvdW50Il09MyxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJiemlwMiIsfSxjZ25zPXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQvY2ducy8zLjQuMCIsWyJmdWxsTmFtZSJdPSJjZ25zLzMuNC4wIixbImxvYWRPcmRlciJdPTE4LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImNn;' export '_ModuleTable003_;' '_ModuleTable004_=bnMiLH0sY21ha2U9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWZpbGVzL2NtYWtlLzMuMTQuNSIsWyJmdWxsTmFtZSJdPSJjbWFrZS8zLjE0LjUiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJjbWFrZSIsfSxbImRldnBhY2stZ251NyJdPXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVmaWxlcy9kZXZwYWNrLWdudTcvMjAyMDAxMjUiLFsiZnVsbE5hbWUiXT0iZGV2cGFjay1nbnU3LzIwMjAwMTI1IixbImxvYWRPcmRlciJdPTI3LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImRldnBhY2stZ251NyIsfSxmZnR3PXtbImZuIl09;' export '_ModuleTable004_;' '_ModuleTable005_=Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQvZmZ0dy8zLjMuOCIsWyJmdWxsTmFtZSJdPSJmZnR3LzMuMy44IixbImxvYWRPcmRlciJdPTI1LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImZmdHciLH0sZ2l0PXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVmaWxlcy9naXQvMi4xOS4yIixbImZ1bGxOYW1lIl09ImdpdC8yLjE5LjIiLFsibG9hZE9yZGVyIl09Myxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJnaXQiLH0sZ251Nz17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZmlsZXMvZ251Ny83LjIuMCIsWyJmdWxsTmFtZSJdPSJnbnU3Lzcu;' export '_ModuleTable005_;' '_ModuleTable006_=Mi4wIixbImxvYWRPcmRlciJdPTUscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZ251NyIsfSxod2xvYz17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3L2h3bG9jLzEuMTEuMTEiLFsiZnVsbE5hbWUiXT0iaHdsb2MvMS4xMS4xMSIsWyJsb2FkT3JkZXIiXT0xMSxwcm9wVD17fSxbInJlZl9jb3VudCJdPTIsWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaHdsb2MiLH0sbWV0aXM9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWRlcHMvZ251Ny9tZXRpcy81LjEuMCIsWyJmdWxsTmFtZSJdPSJtZXRpcy81LjEuMCIsWyJsb2FkT3JkZXIiXT0yMCxwcm9wVD17fSxb;' export '_ModuleTable006_;' '_ModuleTable007_=InJlZl9jb3VudCJdPTEsWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibWV0aXMiLH0sbmV0Y2RmPXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQvbmV0Y2RmLzQuNi4zIixbImZ1bGxOYW1lIl09Im5ldGNkZi80LjYuMyIsWyJsb2FkT3JkZXIiXT0xNSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJuZXRjZGYiLH0sbnVtYWN0bD17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3L251bWFjdGwvMi4wLjEyIixbImZ1bGxOYW1lIl09Im51bWFjdGwvMi4wLjEyIixbImxvYWRPcmRlciJdPTEwLHByb3BUPXt9LFsicmVmX2NvdW50Il09;' export '_ModuleTable007_;' '_ModuleTable008_=NCxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJudW1hY3RsIix9LG9wZW5ibGFzPXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTcvb3BlbmJsYXMvMC4zLjQiLFsiZnVsbE5hbWUiXT0ib3BlbmJsYXMvMC4zLjQiLFsibG9hZE9yZGVyIl09MjEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ib3BlbmJsYXMiLH0sb3Blbm1waTQ9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWRlcHMvZ251Ny9vcGVubXBpNC80LjAuMiIsWyJmdWxsTmFtZSJdPSJvcGVubXBpNC80LjAuMiIsWyJsb2FkT3JkZXIiXT0xNCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVz;' export '_ModuleTable008_;' '_ModuleTable009_=Il09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJvcGVubXBpNCIsfSxvcGVudWN4PXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTcvb3BlbnVjeC8xLjcuMCIsWyJmdWxsTmFtZSJdPSJvcGVudWN4LzEuNy4wIixbImxvYWRPcmRlciJdPTEzLHByb3BUPXt9LFsicmVmX2NvdW50Il09MSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJvcGVudWN4Iix9LHBhcm1ldGlzPXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQvcGFybWV0aXMvNC4wLjMiLFsiZnVsbE5hbWUiXT0icGFybWV0aXMvNC4wLjMiLFsibG9hZE9yZGVyIl09MTkscHJvcFQ9e30sWyJyZWZfY291bnQiXT0xLFsic3RhY2tEZXB0aCJd;' export '_ModuleTable009_;' '_ModuleTable010_=PTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InBhcm1ldGlzIix9LHBoZGY1PXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQvcGhkZjUvMS4xMC41IixbImZ1bGxOYW1lIl09InBoZGY1LzEuMTAuNSIsWyJsb2FkT3JkZXIiXT0xNyxwcm9wVD17fSxbInJlZl9jb3VudCJdPTEsWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icGhkZjUiLH0scG1peD17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZmlsZXMvcG1peC8yLjIuMyIsWyJmdWxsTmFtZSJdPSJwbWl4LzIuMi4zIixbImxvYWRPcmRlciJdPTEyLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVz;' export '_ModuleTable010_;' '_ModuleTable011_=ZXJOYW1lIl09InBtaXgiLH0scG5ldGNkZj17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3LW9wZW5tcGk0L3BuZXRjZGYvMS4xMS4xIixbImZ1bGxOYW1lIl09InBuZXRjZGYvMS4xMS4xIixbImxvYWRPcmRlciJdPTE2LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InBuZXRjZGYiLH0sc2luZ3VsYXJpdHk9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWZpbGVzL3Npbmd1bGFyaXR5LzMuNS4zIixbImZ1bGxOYW1lIl09InNpbmd1bGFyaXR5LzMuNS4zIixbImxvYWRPcmRlciJdPTI2LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InNpbmd1bGFy;' export '_ModuleTable011_;' '_ModuleTable012_=aXR5Iix9LHN1cGVybHU9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWRlcHMvZ251Ny9zdXBlcmx1LzUuMi4xIixbImZ1bGxOYW1lIl09InN1cGVybHUvNS4yLjEiLFsibG9hZE9yZGVyIl09MjIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ic3VwZXJsdSIsfSxzdXBlcmx1X2Rpc3Q9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWRlcHMvZ251Ny1vcGVubXBpNC9zdXBlcmx1X2Rpc3QvNS40LjAiLFsiZnVsbE5hbWUiXT0ic3VwZXJsdV9kaXN0LzUuNC4wIixbImxvYWRPcmRlciJdPTIzLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InN1cGVybHVfZGlzdCIs;' export '_ModuleTable012_;' '_ModuleTable013_=fSx4ej17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3L3h6LzUuMi40IixbImZ1bGxOYW1lIl09Inh6LzUuMi40IixbImxvYWRPcmRlciJdPTgscHJvcFQ9e30sWyJyZWZfY291bnQiXT0yLFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Inh6Iix9LFsieWFtbC1jcHAiXT17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3L3lhbWwtY3BwLzAuNi4yIixbImZ1bGxOYW1lIl09InlhbWwtY3BwLzAuNi4yIixbImxvYWRPcmRlciJdPTkscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ieWFtbC1jcHAiLH0semxpYj17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxl;' export '_ModuleTable013_;' '_ModuleTable014_=ZGVwcy9nbnU3L3psaWIvMS4yLjExIixbImZ1bGxOYW1lIl09InpsaWIvMS4yLjExIixbImxvYWRPcmRlciJdPTYscHJvcFQ9e30sWyJyZWZfY291bnQiXT05LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InpsaWIiLH0sfSxtcGF0aEE9eyIvb3B0L2F0c2UvbW9kdWxlZGVwcy9vcGVubXBpNCIsIi9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQiLCIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3IiwiL29wdC9hdHNlL21vZHVsZWZpbGVzIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9vcHQvYXRzZS9tb2R1bGVmaWxlcyIsfQ==;' export '_ModuleTable014_;' '_ModuleTable_Sz_=14;' export '_ModuleTable_Sz_;'
+++ echo ''
+
+++ echo Currently Loaded Modules:
+Currently Loaded Modules:
+++ echo '' '' '1)' autotools '' '' '' '' '' '' '' '' '8)' xz/5.2.4 '' '' '' '' '' '' '' '15)' netcdf/4.6.3 '' '' '' '22)' superlu/5.2.1
+  1) autotools         8) xz/5.2.4        15) netcdf/4.6.3    22) superlu/5.2.1
+++ echo '' '' '2)' cmake/3.14.5 '' '' '' '' '' '9)' yaml-cpp/0.6.2 '' '16)' pnetcdf/1.11.1 '' '23)' superlu_dist/5.4.0
+  2) cmake/3.14.5      9) yaml-cpp/0.6.2  16) pnetcdf/1.11.1  23) superlu_dist/5.4.0
+++ echo '' '' '3)' git/2.19.2 '' '' '' '' '' '' '10)' numactl/2.0.12 '' '17)' phdf5/1.10.5 '' '' '' '24)' boost/1.72.0
+  3) git/2.19.2       10) numactl/2.0.12  17) phdf5/1.10.5    24) boost/1.72.0
+++ echo '' '' '4)' binutils/2.33.1 '' '11)' hwloc/1.11.11 '' '' '18)' cgns/3.4.0 '' '' '' '' '' '25)' fftw/3.3.8
+  4) binutils/2.33.1  11) hwloc/1.11.11   18) cgns/3.4.0      25) fftw/3.3.8
+++ echo '' '' '5)' gnu7/7.2.0 '' '' '' '' '' '' '12)' pmix/2.2.3 '' '' '' '' '' '19)' parmetis/4.0.3 '' '26)' singularity/3.5.3
+  5) gnu7/7.2.0       12) pmix/2.2.3      19) parmetis/4.0.3  26) singularity/3.5.3
+++ echo '' '' '6)' zlib/1.2.11 '' '' '' '' '' '13)' openucx/1.7.0 '' '' '20)' metis/5.1.0 '' '' '' '' '27)' devpack-gnu7/20200125
+  6) zlib/1.2.11      13) openucx/1.7.0   20) metis/5.1.0     27) devpack-gnu7/20200125
+++ echo '' '' '7)' bzip2/1.0.6 '' '' '' '' '' '14)' openmpi4/4.0.2 '' '21)' openblas/0.3.4
+  7) bzip2/1.0.6      14) openmpi4/4.0.2  21) openblas/0.3.4
+++ echo ''
+
+++ echo '' ''
+
+++ echo ''
+
+++ MODULEPATH=/opt/atse/moduledeps/openmpi4:/opt/atse/moduledeps/gnu7-openmpi4:/opt/atse/moduledeps/gnu7:/opt/atse/modulefiles
+++ export MODULEPATH
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXtbIk1QSSJdPSJvcGVubXBpNCIsWyJib29zdCJdPSJib29zdCIsWyJjb21waWxlciJdPSJnbnU3IixbImRldnBhY2siXT0iZGV2cGFjay1nbnU3IixbImhkZjUiXT0icGhkZjUiLFsibWV0aXMiXT0ibWV0aXMiLFsib3BlbmJsYXMiXT0ib3BlbmJsYXMiLFsicGFybWV0aXMiXT0icGFybWV0aXMiLH0sbVQ9e2F1dG90b29scz17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZmlsZXMvYXV0b3Rvb2xzIixbImZ1bGxOYW1lIl09ImF1dG90b29scyIsWyJsb2FkT3JkZXIiXT0xLHByb3BUPXt9LFsic3RhY2tEZXB0aCJd
+++ export _ModuleTable001_
+++ _ModuleTable002_=PTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImF1dG90b29scyIsfSxiaW51dGlscz17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZmlsZXMvYmludXRpbHMvMi4zMy4xIixbImZ1bGxOYW1lIl09ImJpbnV0aWxzLzIuMzMuMSIsWyJsb2FkT3JkZXIiXT00LHByb3BUPXt9LFsicmVmX2NvdW50Il09MSxbInN0YWNrRGVwdGgiXT0yLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJiaW51dGlscyIsfSxib29zdD17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3LW9wZW5tcGk0L2Jvb3N0LzEuNzIuMCIsWyJmdWxsTmFtZSJdPSJib29zdC8xLjcyLjAiLFsibG9hZE9yZGVyIl09MjQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1
+++ export _ModuleTable002_
+++ _ModuleTable003_=cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYm9vc3QiLH0sYnppcDI9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWRlcHMvZ251Ny9iemlwMi8xLjAuNiIsWyJmdWxsTmFtZSJdPSJiemlwMi8xLjAuNiIsWyJsb2FkT3JkZXIiXT03LHByb3BUPXt9LFsicmVmX2NvdW50Il09MyxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJiemlwMiIsfSxjZ25zPXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQvY2ducy8zLjQuMCIsWyJmdWxsTmFtZSJdPSJjZ25zLzMuNC4wIixbImxvYWRPcmRlciJdPTE4LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImNn
+++ export _ModuleTable003_
+++ _ModuleTable004_=bnMiLH0sY21ha2U9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWZpbGVzL2NtYWtlLzMuMTQuNSIsWyJmdWxsTmFtZSJdPSJjbWFrZS8zLjE0LjUiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJjbWFrZSIsfSxbImRldnBhY2stZ251NyJdPXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVmaWxlcy9kZXZwYWNrLWdudTcvMjAyMDAxMjUiLFsiZnVsbE5hbWUiXT0iZGV2cGFjay1nbnU3LzIwMjAwMTI1IixbImxvYWRPcmRlciJdPTI3LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTAsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImRldnBhY2stZ251NyIsfSxmZnR3PXtbImZuIl09
+++ export _ModuleTable004_
+++ _ModuleTable005_=Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQvZmZ0dy8zLjMuOCIsWyJmdWxsTmFtZSJdPSJmZnR3LzMuMy44IixbImxvYWRPcmRlciJdPTI1LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09ImZmdHciLH0sZ2l0PXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVmaWxlcy9naXQvMi4xOS4yIixbImZ1bGxOYW1lIl09ImdpdC8yLjE5LjIiLFsibG9hZE9yZGVyIl09Myxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJnaXQiLH0sZ251Nz17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZmlsZXMvZ251Ny83LjIuMCIsWyJmdWxsTmFtZSJdPSJnbnU3Lzcu
+++ export _ModuleTable005_
+++ _ModuleTable006_=Mi4wIixbImxvYWRPcmRlciJdPTUscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iZ251NyIsfSxod2xvYz17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3L2h3bG9jLzEuMTEuMTEiLFsiZnVsbE5hbWUiXT0iaHdsb2MvMS4xMS4xMSIsWyJsb2FkT3JkZXIiXT0xMSxwcm9wVD17fSxbInJlZl9jb3VudCJdPTIsWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iaHdsb2MiLH0sbWV0aXM9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWRlcHMvZ251Ny9tZXRpcy81LjEuMCIsWyJmdWxsTmFtZSJdPSJtZXRpcy81LjEuMCIsWyJsb2FkT3JkZXIiXT0yMCxwcm9wVD17fSxb
+++ export _ModuleTable006_
+++ _ModuleTable007_=InJlZl9jb3VudCJdPTEsWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ibWV0aXMiLH0sbmV0Y2RmPXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQvbmV0Y2RmLzQuNi4zIixbImZ1bGxOYW1lIl09Im5ldGNkZi80LjYuMyIsWyJsb2FkT3JkZXIiXT0xNSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJuZXRjZGYiLH0sbnVtYWN0bD17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3L251bWFjdGwvMi4wLjEyIixbImZ1bGxOYW1lIl09Im51bWFjdGwvMi4wLjEyIixbImxvYWRPcmRlciJdPTEwLHByb3BUPXt9LFsicmVmX2NvdW50Il09
+++ export _ModuleTable007_
+++ _ModuleTable008_=NCxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJudW1hY3RsIix9LG9wZW5ibGFzPXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTcvb3BlbmJsYXMvMC4zLjQiLFsiZnVsbE5hbWUiXT0ib3BlbmJsYXMvMC4zLjQiLFsibG9hZE9yZGVyIl09MjEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ib3BlbmJsYXMiLH0sb3Blbm1waTQ9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWRlcHMvZ251Ny9vcGVubXBpNC80LjAuMiIsWyJmdWxsTmFtZSJdPSJvcGVubXBpNC80LjAuMiIsWyJsb2FkT3JkZXIiXT0xNCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVz
+++ export _ModuleTable008_
+++ _ModuleTable009_=Il09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJvcGVubXBpNCIsfSxvcGVudWN4PXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTcvb3BlbnVjeC8xLjcuMCIsWyJmdWxsTmFtZSJdPSJvcGVudWN4LzEuNy4wIixbImxvYWRPcmRlciJdPTEzLHByb3BUPXt9LFsicmVmX2NvdW50Il09MSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJvcGVudWN4Iix9LHBhcm1ldGlzPXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQvcGFybWV0aXMvNC4wLjMiLFsiZnVsbE5hbWUiXT0icGFybWV0aXMvNC4wLjMiLFsibG9hZE9yZGVyIl09MTkscHJvcFQ9e30sWyJyZWZfY291bnQiXT0xLFsic3RhY2tEZXB0aCJd
+++ export _ModuleTable009_
+++ _ModuleTable010_=PTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InBhcm1ldGlzIix9LHBoZGY1PXtbImZuIl09Ii9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQvcGhkZjUvMS4xMC41IixbImZ1bGxOYW1lIl09InBoZGY1LzEuMTAuNSIsWyJsb2FkT3JkZXIiXT0xNyxwcm9wVD17fSxbInJlZl9jb3VudCJdPTEsWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icGhkZjUiLH0scG1peD17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZmlsZXMvcG1peC8yLjIuMyIsWyJmdWxsTmFtZSJdPSJwbWl4LzIuMi4zIixbImxvYWRPcmRlciJdPTEyLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVz
+++ export _ModuleTable010_
+++ _ModuleTable011_=ZXJOYW1lIl09InBtaXgiLH0scG5ldGNkZj17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3LW9wZW5tcGk0L3BuZXRjZGYvMS4xMS4xIixbImZ1bGxOYW1lIl09InBuZXRjZGYvMS4xMS4xIixbImxvYWRPcmRlciJdPTE2LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InBuZXRjZGYiLH0sc2luZ3VsYXJpdHk9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWZpbGVzL3Npbmd1bGFyaXR5LzMuNS4zIixbImZ1bGxOYW1lIl09InNpbmd1bGFyaXR5LzMuNS4zIixbImxvYWRPcmRlciJdPTI2LHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InNpbmd1bGFy
+++ export _ModuleTable011_
+++ _ModuleTable012_=aXR5Iix9LHN1cGVybHU9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWRlcHMvZ251Ny9zdXBlcmx1LzUuMi4xIixbImZ1bGxOYW1lIl09InN1cGVybHUvNS4yLjEiLFsibG9hZE9yZGVyIl09MjIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ic3VwZXJsdSIsfSxzdXBlcmx1X2Rpc3Q9e1siZm4iXT0iL29wdC9hdHNlL21vZHVsZWRlcHMvZ251Ny1vcGVubXBpNC9zdXBlcmx1X2Rpc3QvNS40LjAiLFsiZnVsbE5hbWUiXT0ic3VwZXJsdV9kaXN0LzUuNC4wIixbImxvYWRPcmRlciJdPTIzLHByb3BUPXt9LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InN1cGVybHVfZGlzdCIs
+++ export _ModuleTable012_
+++ _ModuleTable013_=fSx4ej17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3L3h6LzUuMi40IixbImZ1bGxOYW1lIl09Inh6LzUuMi40IixbImxvYWRPcmRlciJdPTgscHJvcFQ9e30sWyJyZWZfY291bnQiXT0yLFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09Inh6Iix9LFsieWFtbC1jcHAiXT17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3L3lhbWwtY3BwLzAuNi4yIixbImZ1bGxOYW1lIl09InlhbWwtY3BwLzAuNi4yIixbImxvYWRPcmRlciJdPTkscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0ieWFtbC1jcHAiLH0semxpYj17WyJmbiJdPSIvb3B0L2F0c2UvbW9kdWxl
+++ export _ModuleTable013_
+++ _ModuleTable014_=ZGVwcy9nbnU3L3psaWIvMS4yLjExIixbImZ1bGxOYW1lIl09InpsaWIvMS4yLjExIixbImxvYWRPcmRlciJdPTYscHJvcFQ9e30sWyJyZWZfY291bnQiXT05LFsic3RhY2tEZXB0aCJdPTEsWyJzdGF0dXMiXT0iYWN0aXZlIixbInVzZXJOYW1lIl09InpsaWIiLH0sfSxtcGF0aEE9eyIvb3B0L2F0c2UvbW9kdWxlZGVwcy9vcGVubXBpNCIsIi9vcHQvYXRzZS9tb2R1bGVkZXBzL2dudTctb3Blbm1waTQiLCIvb3B0L2F0c2UvbW9kdWxlZGVwcy9nbnU3IiwiL29wdC9hdHNlL21vZHVsZWZpbGVzIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9vcHQvYXRzZS9tb2R1bGVmaWxlcyIsfQ==
+++ export _ModuleTable014_
+++ _ModuleTable_Sz_=14
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ nvidia-smi
+./collect_environment.sh: line 18: nvidia-smi: command not found
++ lshw -short -quiet -sanitize
++ cat
+WARNING: you should run this program as super-user.
+H/W path      Device     Class      Description
+===============================================
+                         system     Computer
+/0                       bus        Motherboard
+/0/0                     memory     255GiB System memory
+/0/1                     processor
+/0/2                     processor
+/0/3                     processor
+/0/4                     processor
+/0/5                     processor
+/0/6                     processor
+/0/7                     processor
+/0/8                     processor
+/0/9                     processor
+/0/a                     processor
+/0/b                     processor
+/0/c                     processor
+/0/d                     processor
+/0/e                     processor
+/0/f                     processor
+/0/10                    processor
+/0/11                    processor
+/0/12                    processor
+/0/13                    processor
+/0/14                    processor
+/0/15                    processor
+/0/16                    processor
+/0/17                    processor
+/0/18                    processor
+/0/19                    processor
+/0/1a                    processor
+/0/1b                    processor
+/0/1c                    processor
+/0/1d                    processor
+/0/1e                    processor
+/0/1f                    processor
+/0/20                    processor
+/0/21                    processor
+/0/22                    processor
+/0/23                    processor
+/0/24                    processor
+/0/25                    processor
+/0/26                    processor
+/0/27                    processor
+/0/28                    processor
+/0/29                    processor
+/0/2a                    processor
+/0/2b                    processor
+/0/2c                    processor
+/0/2d                    processor
+/0/2e                    processor
+/0/2f                    processor
+/0/30                    processor
+/0/31                    processor
+/0/32                    processor
+/0/33                    processor
+/0/34                    processor
+/0/35                    processor
+/0/36                    processor
+/0/37                    processor
+/0/38                    processor
+/0/39                    processor
+/0/3a                    processor
+/0/3b                    processor
+/0/3c                    processor
+/0/3d                    processor
+/0/3e                    processor
+/0/3f                    processor
+/0/40                    processor
+/0/41                    processor
+/0/42                    processor
+/0/43                    processor
+/0/44                    processor
+/0/45                    processor
+/0/46                    processor
+/0/47                    processor
+/0/48                    processor
+/0/49                    processor
+/0/4a                    processor
+/0/4b                    processor
+/0/4c                    processor
+/0/4d                    processor
+/0/4e                    processor
+/0/4f                    processor
+/0/50                    processor
+/0/51                    processor
+/0/52                    processor
+/0/53                    processor
+/0/54                    processor
+/0/55                    processor
+/0/56                    processor
+/0/57                    processor
+/0/58                    processor
+/0/59                    processor
+/0/5a                    processor
+/0/5b                    processor
+/0/5c                    processor
+/0/5d                    processor
+/0/5e                    processor
+/0/5f                    processor
+/0/60                    processor
+/0/61                    processor
+/0/62                    processor
+/0/63                    processor
+/0/64                    processor
+/0/65                    processor
+/0/66                    processor
+/0/67                    processor
+/0/68                    processor
+/0/69                    processor
+/0/6a                    processor
+/0/6b                    processor
+/0/6c                    processor
+/0/6d                    processor
+/0/6e                    processor
+/0/6f                    processor
+/0/70                    processor
+/0/100                   bridge     CN99xx [ThunderX2] Integrated PCI Host bridge
+/0/100/1                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/100/2                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/100/3                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/100/4                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/100/5                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/100/5/0    ib0        network    MT27800 Family [ConnectX-5]
+/0/100/6                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/100/7                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/100/8                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/100/9                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/100/a                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/100/b                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/100/b/0    enp22s0f0  network    MT27710 Family [ConnectX-4 Lx]
+/0/100/b/0.1  enp22s0f1  network    MT27710 Family [ConnectX-4 Lx]
+/0/100/c                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/100/d                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/100/e                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/100/e/0               bridge     AST1150 PCI-to-PCI Bridge
+/0/100/e/0/0             display    ASPEED Graphics Family
+/0/100/f                 bus        CN99xx [ThunderX2] Integrated USB 3.0 xHCI Host Controller
+/0/100/f.1               bus        CN99xx [ThunderX2] Integrated USB 3.0 xHCI Host Controller
+/0/100/10                storage    CN99xx [ThunderX2] Integrated AHCI/SATA 3 Host Controller
+/0/100/10.1              storage    CN99xx [ThunderX2] Integrated AHCI/SATA 3 Host Controller
+/0/101                   bridge     CN99xx [ThunderX2] Integrated PCI Host bridge
+/0/101/1                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/101/2                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/101/3                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/101/4                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/101/5                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/101/6                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/101/7                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/101/8                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/101/9                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/101/9/0    ib1        network    MT27800 Family [ConnectX-5]
+/0/101/a                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/101/b                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/101/c                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/101/d                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/101/e                 bridge     CN99xx [ThunderX2] Integrated PCI Express RP Bridge
+/0/101/f                 bus        CN99xx [ThunderX2] Integrated USB 3.0 xHCI Host Controller
+/0/101/f.1               bus        CN99xx [ThunderX2] Integrated USB 3.0 xHCI Host Controller
+/0/101/10                storage    CN99xx [ThunderX2] Integrated AHCI/SATA 3 Host Controller
+/0/101/10.1              storage    CN99xx [ThunderX2] Integrated AHCI/SATA 3 Host Controller
+/0/71                    system     PnP device PNP0c02
+/1            scsi4      storage
+/2            scsi5      storage
+/3            scsi6      storage
+/4            bond0      network    Ethernet interface

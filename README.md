@@ -23,3 +23,6 @@ package recipes in this project.
 
 For more information regarding container versions of ATSE, please reference the associated Astra [README](containers/astra/README.md) for more information.
 
+## SC20
+
+The environment conditions were gathered on an open machine with similar hardware to Astra using the SC20 Author Kit's environment collection script. (https://github.com/SC-Tech-Program/Author-Kit). The results are in (mayer_environment_output.txt). 
